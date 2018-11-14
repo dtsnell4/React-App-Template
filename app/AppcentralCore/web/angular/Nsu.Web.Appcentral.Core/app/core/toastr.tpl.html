@@ -1,0 +1,11 @@
+﻿<div ng-switch on="allowHtml" class="{{toastClass}} alert alert-{{toastType}}">
+ <div class="row">
+ 	<div class="col-xs-2"><i ng-if="toastType === 'success'" class="fa fa-check fa-3x"></i> <i ng-if="toastType === 'danger'" class="fa fa-times-circle fa-3x"></i> <i ng-if="toastType === 'warning'" class="fa fa-warning fa-3x"></i> <i ng-if="toastType === 'info'" class="fa fa-info-circle fa-3x"></i></div>
+ 	<div class="col-xs-10">
+     <button type="button" class="close pull-right" data-dismiss="alert" aria-hidden="true">×</button>
+     <p><span ng-switch-default ng-if="title"><strong>{{title}}</strong><br>
+      {{message}}</span> <span ng-switch-default ng-if="!title"><strong>{{message}}</strong></span></p></div>
+ 	
+ </div>
+  
+</div>

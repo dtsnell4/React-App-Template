@@ -1,0 +1,36 @@
+﻿.appnav .btn {
+	background: none repeat scroll 0 0 #fff;
+	border-color: #ffffff !important;
+	text-align: left;
+	margin-bottom: 0 !important;
+	padding: 7px 0px !important;
+}
+.btn-group.appnav .btn-lg {
+	font-size: 36px;
+	font-weight: 300;
+	color: #888;
+}
+.btn-group.appnav.open .dropdown-toggle, .btn-group.appnav .dropdown-toggle:hover {
+	box-shadow: none;
+	color: #0188cc;
+}
+.btn-group.appnav.open .dropdown-menu {
+	margin-top: 0px;
+	padding: 0px;
+}
+.btn-group .dropdown-menu {
+	-moz-box-shadow: 0 2px 3px rgba(0, 0, 0, 0.176);
+	-webkit-box-shadow: 0 2px 3px rgba(0, 0, 0, 0.176);
+	box-shadow: 0 2px 3px rgba(0, 0, 0, 0.176);
+}
+th {
+    font-weight: bold !important;
+}
+.list-group-item h3 {
+    margin-top: 10px;
+}
+@media(max-width:767px) {
+.btn-group.appnav {
+	padding-left: 10px;
+}
+}

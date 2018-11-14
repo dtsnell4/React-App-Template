@@ -1,0 +1,342 @@
+/////////////////////////
+// Import vendor files //
+/////////////////////////
+@import "../twitter-boostrap/tables";
+
+///////////////////////
+// Custom Overrides: //
+///////////////////////
+table td:last-child {
+    border-right: none;
+}
+
+.no-stripes table tr:nth-child(2n) {
+    background: none;
+}
+.table td {
+    vertical-align: middle;
+}
+
+//////////////////////////
+// Syncfusion Table CSS //
+//////////////////////////
+
+.e-grid {
+	border: none;
+    margin-top: 1rem;
+    &.e-right-buttons {
+    	.e-toolbar {
+    		text-align: right;
+    		margin-right: 70px;
+	    	.e-toolbar-items .e-toolbar-item .e-tbar-btn {
+	    		background-color: $primary;
+	    		border-color: $primary;
+	    		border-radius: 0;
+	    		&:hover {
+				    background-color: #2992d9;
+	    			border-color: #258cd1;
+	    		}
+		    	.e-tbar-btn-text {
+		    		color: $white;
+		    	}
+	    	}
+    	}
+    }
+	.e-toolbar {
+		min-height: 25px;
+		border-left: none;
+		border-right: none;
+		border-top: none;
+		border-bottom: none;
+		background: transparent;
+		.e-toolbar-items {
+		    background: transparent;
+			margin-bottom: 1rem;
+			.e-toolbar-item {
+				min-height: 25px;
+				height: auto;
+				.e-tbar-btn, .e-tbar-btn.e-btn:active, .e-tbar-btn.e-btn:focus {
+				    display: inline-block;
+				    font-weight: 400;
+				    text-align: center;
+				    white-space: nowrap;
+				    vertical-align: middle;
+				    border: 1px solid transparent;
+				    padding: $btn-padding-y $btn-padding-x;
+				    font-size: $font-size-base;
+				    line-height: $line-height-base;
+				    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+				    background-color: $white;
+		    		border-color: $success;
+					border-radius: 0.25rem;
+		    		cursor: pointer;
+		    		margin: 0;
+		    		.e-icons, .e-tbar-btn-text {
+					    color: $success;
+					    cursor: pointer;
+					}
+					// .e-btn-icon {
+					// 	display: none;
+					// }
+					&:hover {
+					    padding: $input-btn-padding-y $input-btn-padding-x;
+					    background-color: $success;
+						border-color: $success;
+						.e-tbar-btn-text, .e-btn-icon {
+							color: $white;
+						}
+					}
+				}
+			}
+		}
+		.e-toolbar-items:not(.e-tbar-pos) .e-toolbar-item:first-child {
+		    margin-left: 0;
+		}
+		.e-toolbar-items .e-toolbar-item:not(.e-separator) {
+			padding: 0;
+			margin-right: 1rem;
+		}
+	}
+	.e-gridheader {
+		border-top: 1px solid #dddddd;
+    	.e-sortfilter .e-headercelldiv, 
+    	.e-stackedheadercelldiv, 
+    	.e-headercell .e-headercelldiv.e-headerchkcelldiv {
+    		padding: 0 0 0 0;
+    	}
+		.e-headercell, .e-detailheadercell {
+		    height: initial;
+			padding: 10px;
+		}
+	}	
+	&.e-responsive .e-rowcell, &.e-responsive .e-headercelldiv {
+	    text-overflow: initial;
+	    white-space: initial;
+	}
+	.e-headercelldiv {
+		height: initial;
+	    line-height: initial;
+	    font-size: initial;
+	    font-weight: initial;
+	    padding: 0;
+	    margin: 0;
+	}
+	.e-rowcell, .e-detailrowcollapse, .e-detailrowexpand {
+	    color: initial;
+	    opacity: initial;
+	    padding: 8px 11px;
+	}
+	.e-rowcell {
+		font-size: initial;
+		border: none;
+	    border-bottom: 1px solid #e9e9e9;
+		.btn.btn-link {
+			padding: 0;
+		}
+	}
+	.e-headercell, .e-detailheadercell {
+	    padding: 3px 11px;
+	}
+	.e-gridheader tr th:first-child, .e-rowcell:first-child, .e-summarycell:first-child {
+	    padding-left: 8px;
+	}
+	table thead th {
+	    vertical-align: middle;
+	}
+	table thead span {
+	    // font-size: 1.1rem;
+	    font-weight: 600;
+	}
+	.e-control, .e-css {
+		font-family: inherit;
+    	font-size: 14px;
+		&.e-dropdown-btn{
+			background-color: $primary;
+			color:$white;
+			border-color: $primary;
+			.e-btn-icon{
+				color:$white;
+			}
+		}
+	}
+	.e-sortfilterdiv {
+		padding-right: 0;
+		margin-right: 0;
+	}
+}
+.hide-icons .e-tbar-btn .e-icons {
+	display: none !important;
+}
+
+.syncfgrid-buttoncontainer {
+	position: relative;
+	.buttonscontainer {
+		position: absolute;
+		z-index: 1;
+		pointer-events: none;
+		.btn, .filters-container, .filters-mask {
+			pointer-events: all;
+		}
+	}
+}
+@media (max-width: 767px) {
+	.syncfgrid-buttoncontainer {
+		.buttonscontainer {
+			position: relative;
+		}
+	}
+	.e-grid .e-toolbar .e-toolbar-items {
+		display: block;
+		margin-bottom: 1rem;
+		.e-toolbar-item:not(.e-separator) {
+			display: block;
+			margin-right: 0;
+			.e-tbar-btn {
+				width: 100% !important;
+			}
+		}
+	}
+	.e-toolbar-items{
+		.e-toolbar-item{
+			margin:1rem 0rem;
+		}
+	}
+}
+// Pagination for Syncfusion Grid Table
+.e-pager {
+	border: none;
+	div.e-parentmsgbar{
+		float: left;
+	    padding-top: 21px;
+	}
+	.e-pp, .e-np, .e-pp:hover, .e-np:hover {
+		font-size: inherit;
+		padding: 14px 13px 12px 13px;
+	}
+	.e-pagesizes {
+		float: right;
+		margin-top: 10px;
+		.e-pagerdropdown {
+		    height: 40px;
+		    width: 70px;
+		    margin: 0;
+		    .e-dropdownlist {
+		    	padding-left: 10px;
+		    	padding-top: 8px;
+		    } 
+		}
+		.e-pagerconstant {
+    		margin: 0 0 0px 12px;
+    		vertical-align: middle;
+    	}
+		.e-input-group.e-control-wrapper:not(.e-success):not(.e-warning):not(.e-error):not(.e-float-icon-left), 
+		.e-input-focus.e-input-group.e-control-wrapper:not(.e-success):not(.e-warning):not(.e-error):not(.e-float-icon-left) {
+			border-color: #ccc;
+		    line-height: 1.5;
+			border: 1px solid #ccc;  
+			margin-bottom: 0;
+			height: 40px;
+			border-radius: $border-radius;
+		}
+		.e-input-group.e-control-wrapper:not(.e-float-icon-left):not(.e-float-input)::before,
+		.e-input-group.e-control-wrapper:not(.e-float-icon-left):not(.e-float-input)::after {
+			background: transparent;
+			height: 0;
+		}
+	}
+	.e-pagercontainer {
+		float: right;
+		background-color: #fff;
+	    border: 1px solid #ccc;
+        margin: 10px 0 0 20px;
+        border-radius: $border-radius;
+	    .e-firstpage, 
+	    .e-prevpage, 
+	    .e-firstpagedisabled, 
+	    .e-prevpagedisabled, 
+	    .e-nextpage, 
+	    .e-lastpage, 
+	    .e-nextpagedisabled, 
+	    .e-lastpagedisabled {
+	    	margin: 0;
+	    	padding: 13px 13px 14px;
+	    }
+
+	}
+	.e-numericitem {
+		border-radius: $border-radius;
+		padding: 14px 13px 12px 13px;
+		margin-right: 0;
+		&.e-currentitem, .e-currentitem:hover {
+			background: $primary;
+			color: $white;
+			cursor: default;
+			border-radius: $border-radius;
+			padding: 14px 13px 12px 13px;
+		}
+		&:hover:not(.e-np):not(.e-pp):not(.e-active) {
+			border-radius: $border-radius;
+			padding: 14px 13px 12px 13px;
+		}
+	}
+	.e-next.e-icons.e-icon-next.e-nextpagedisabled.e-disable,
+	.e-next.e-icons.e-icon-next.e-nextpage.e-pager-default {
+	    margin-left: 0px;
+	}
+	.e-pager-default:hover {
+	    background: #eee;
+	    color: #000;
+	    opacity: 1;
+	}
+}
+
+// Table with Checkboxes in first column
+.checkbox-list.e-grid {
+	:not(.e-gridheader) table.e-table {
+		border-collapse: collapse;
+	}
+	td.e-active {
+		background: transparent;
+	}
+	.e-gridheader {
+	    border: 1px solid #dddddd;
+	    border-bottom-width: 0;
+	    .e-headercontent {
+	    	padding: 0;
+	    }
+	    th {
+	    	padding: 8px 11px;
+	    	.e-checkbox-wrapper {
+	    		display: none;
+			}
+	    }
+	}
+	.e-rowcell .e-checkbox-wrapper {
+		min-width: 30px;
+		padding-left: 1px;
+	}
+	table {
+		tr:nth-child(2n) {
+		    background: none;
+		}
+		tbody tr {
+			border: 1px solid #dddddd;
+			> td:first-child {
+				border-right: 1px solid #dddddd;
+			}
+		}
+	}
+
+}
+
+.control-section{
+    &.add-qualifications-table{
+        .e-toolbar{
+			display:flex;
+            justify-content: flex-end;
+            .e-toolbar-items{
+                margin-bottom:0rem;
+            }
+        }
+    }
+}

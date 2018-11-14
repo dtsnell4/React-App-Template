@@ -1,0 +1,125 @@
+{
+  "name": "nsu.web.appcentral.core",
+  "version": "0.0.1",
+  "license": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.3",
+    "angular": "~1.3.15",
+    "bootstrap": "~3.3.5",
+    "fontawesome": "~4.3.0",
+    "angular-sanitize": "~1.3.15",
+    "angular-animate": "~1.3.15",
+    "angular-messages": "~1.3.15",
+    "angular-resource": "~1.3.15",
+    "angular-route": "~1.3.15",
+    "html5shiv": "~3.7.2",
+    "respond": "~1.4.2",
+    "angular-bootstrap-switch": "~0.4.0",
+    "angular-loading-bar": "~0.7.1",
+    "angular-toastr": "~1.3.0",
+    "angular-busy": "~4.1.2",
+    "angular-mocks": "~1.3.15",
+    "angular-bootstrap-show-errors": "~2.3.0",
+    "angular-bootstrap": "~0.12.1",
+    "angular-local-storage": "~0.1.5",
+    "angular-jwt": "~0.0.8",
+    "angular-promise-cache": "~0.0.11",
+    "ng-file-upload": "~4.1.3",
+    "moment": "~2.9.0",
+    "angular-datatables": "~0.4.3",
+    "icheck": "2.x",
+    "bootstrap-daterangepicker": "~1.3.21",
+    "angularjs-dropdown-multiselect": "https://github.com/karthilxg/angularjs-dropdown-multiselect.git#f2e2af7c7cc8151b9a5c73c163d8bbce6f4274a1",
+    "datatables-plugins": "https://github.com/DataTables/Plugins.git#~1.10.7",
+    "angular-ui-select": "~0.12.0",
+    "ng-covervid": "~0.1.0",
+    "angular-bootstrap-colorpicker": "~3.0.18",
+    "bootstrap3-wysihtml5-bower": "~0.3.3",
+    "angular-summernote": "~0.5.2",
+    "angular-filter": "~0.5.7",
+    "angular-bootstrap-datepicker": "~0.3.1",
+    "angular-bootstrap-datetimepicker": "~0.4.0",
+    "angular-xeditable": "~0.1.9",
+    "angular-timeago": "~0.2.5",
+    "oi.select": "~0.2.20",
+    "moment-timezone": "~0.5.3",
+    "angular-google-chart": "^0.1.0",
+    "eonasdan-bootstrap-datetimepicker": "^4.17.37",
+    "matchHeight": "matchheight#^0.7.0",
+    "angular-ui-sortable": "^0.14.2",
+    "angular-timezone-selector": "^1.6.0",
+    "angular-froala": "2.6.6",
+    "froala-wysiwyg-editor": "2.8.4",
+    "angular-translate": "^2.13.1",
+    "angular-translate-loader-static-files": "^2.13.1",
+    "angular-ui-calendar": "^1.0.2",
+    "angular-file-saver": "^1.1.3",
+    "angular-ui-grid": "^4.0.3",
+    "angular-bind-html-compile": "^1.3.0"
+  },
+  "resolutions": {
+    "angular": "~1.3",
+    "bootstrap": "~3.3.5",
+    "jquery": "~2.1.3",
+    "moment": "~2.9.0",
+    "moment-timezone": "~0.5.3",
+    "lodash": "~2.4.2",
+    "froala-wysiwyg-editor": "^2.8.4"
+  },
+  "overrides": {
+    "angular-toastr": {
+      "main": [
+        "./dist/angular-toastr.js",
+        "./dist/angular-toastr.css"
+      ]
+    },
+    "bootstrap": {
+      "main": [
+        "dist/css/bootstrap.css",
+        "dist/js/bootstrap.js",
+        "dist/fonts/glyphicons-halflings-regular.eot",
+        "dist/fonts/glyphicons-halflings-regular.svg",
+        "dist/fonts/glyphicons-halflings-regular.ttf",
+        "dist/fonts/glyphicons-halflings-regular.woff",
+        "dist/fonts/glyphicons-halflings-regular.woff2"
+      ]
+    },
+    "datatables-plugins": {
+      "main": [
+        "./integration/bootstrap/3/dataTables.bootstrap.js",
+        "./integration/bootstrap/3/dataTables.bootstrap.css"
+      ]
+    },
+    "ng-file-upload": {
+      "main": [
+        "./ng-file-upload.min.js"
+      ]
+    },
+    "html5shiv": {
+      "main": []
+    },
+    "datatables": {
+      "main": [
+        "media/js/jquery.dataTables.js"
+      ]
+    },
+    "respond": {
+      "main": []
+    },
+    "icheck": {
+      "main": [
+        "./icheck.js"
+      ]
+    }
+  },
+  "devDependencies": {
+    "angular-translate": "^2.13.1"
+  }
+}

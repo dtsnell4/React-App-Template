@@ -1,0 +1,29 @@
+// Import vendor file
+@import "../twitter-boostrap/list-group";
+
+// Custom Overrides:
+.list-group {
+	margin-bottom: $spacer;
+}
+.list-group-item {
+
+	&.active {
+		background-color: #337ab7;
+		border-color: #337ab7;
+		* {
+			color: $white;
+		}
+	}
+
+  	&:first-child {
+    	border-top-right-radius: 0rem;    // !!! Move this to $list-group-border-radius in _variables after Boostrap Alpha 6 is gone 
+    	border-top-left-radius: 0rem;    // !!! Move this to $list-group-border-radius in _variables after Boostrap Alpha 6 is gone 
+  	}
+
+  	&:last-child {
+    	margin-bottom: 0;
+    	border-bottom-right-radius: 0rem;    // !!! Move this to $list-group-border-radius in _variables after Boostrap Alpha 6 is gone 
+    	border-bottom-left-radius: 0rem;    // !!! Move this to $list-group-border-radius in _variables after Boostrap Alpha 6 is gone 
+  	}
+
+}

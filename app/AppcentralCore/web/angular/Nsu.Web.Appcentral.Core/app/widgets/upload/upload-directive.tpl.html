@@ -1,0 +1,7 @@
+﻿<input type="hidden" name="{{upload.name}}" value="{{upload.id}}"/>
+<div class="fileinput fileinput-new nopadding" ngf-select ngf-multiple="false"
+         ngf-accept="upload.extensions"
+         ng-model="upload.files" ngf-change="upload.upload($files, $event, $rejectedFiles)" reset-on-click="false"> <span class="btn btn-primary btn-file btn-sm"> <span>{{upload.oldfile?"Change File":"Select File"}}</span>
+  <input type="file" name="">
+  </span> <span class="fileinput-filename">{{(upload.oldfile.name.length > 0)?upload.oldfile.name:"No file selected" | limitTo: 50}}</span> </div>
+<button class="btn btn-danger btn-trans no-border no-bg texthover" ng-show="upload.oldfile.name.length > 0" ng-click="upload.removeFile()"><i class="fa fa-trash"></i></button>

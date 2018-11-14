@@ -1,0 +1,48 @@
+﻿{
+  "appname": "AppCentral.core",
+  "analytics": "GTM-NHHQ5K2",
+  "version":  "0.0.2",
+  "port": "8808",
+  "htmltemplates": "./App/**/*.tpl.html",
+  "client": "./App/",
+  "css": [
+    "./app/style/css/*.css",
+    "./app/style/css/**/*.css",
+    "!./app/style/css/v3/*.css"
+  ],
+ "cleancss": [
+    "./app/style/css/*.css",
+	"./app/style/css/**/*.css",
+    "!./app/style/css/v2/*.css"
+  ],
+  "copy": [
+    "Web.config"
+  ],
+  "copyFroalaCss": [
+  "./app/style/css/widgets/syllabi-preview.css"
+  ],
+  "images": [
+    "./images/**",
+    "./App/**/*.png",
+    "./App/**/*.svg",
+    "./App/**/*.jpg"
+  ],
+  "js": [
+    "./App/**/*module*.js",
+    "./App/**/*.routes.js",
+    "./App/**/*.js"
+  ],
+  "ie9jsfiles": [
+    "./bower_components/html5shiv/dist/html5shiv.js",
+    "./bower_components/respond/src/respond.js",
+    "./ie9js/*.js"
+  ],
+  "fonts":[
+	"./app/style/fonts/*.eot",
+	"./app/style/fonts/*.ttf",
+	"./app/style/fonts/*.svg",
+	"./app/style/fonts/*.woff",
+	"./app/style/fonts/*.woff2"
+  ],
+  "build": "./dist/"
+}

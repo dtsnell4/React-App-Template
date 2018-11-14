@@ -1,0 +1,29 @@
+﻿<div class="filters" style="background-color:white; border-bottom:1px solid #dedede; border-top: 1px solid #dedede;">
+    <!--<div class="icheckbox_square-blue checkbox" aria-checked="false" aria-disabled="false">-->
+    <div class="icheckbox_square-blue" style="cursor:default;">
+        <!--<input id="check-all" type="checkbox" name="checkall" style="position: absolute; opacity: 0;">
+            <ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);">
+            </ins>-->
+    </div>
+    <!--<span>Select All</span>-->
+
+    <div class="btn-group pull-right">
+        <button class="btn btn-sm btn-flat btn-default" type="button" ng-click="vm.paging(vm.page - 1)" ng-disabled="vm.page === 1 || vm.getmessages.length === 0"><i class="fa fa-angle-left"></i></button>
+        <button class="btn btn-sm btn-flat btn-default" type="button" ng-click="vm.paging(vm.page + 1)" ng-disabled="vm.nextpage === false"><i class="fa fa-angle-right"></i></button>
+    </div>
+
+
+
+    <div class="btn-group pull-right" >
+
+        <select ng-model="vm.selectedOrder" class="btn btn-sm btn-flat btn-default dropdown-toggle" ng-change="vm.sorting()" ng-disabled="vm.getmessages.length === 0" style="font-size:11.8px;">
+            <option value="" disabled style="display:none;">Order by</option>
+            <option ng-repeat="option in vm.options" ng-selected="(option.value === vm.selectedOrder)" value="{{option.value}}">{{option.name}}</option>
+        </select>
+
+    </div>
+
+
+
+</div>
+

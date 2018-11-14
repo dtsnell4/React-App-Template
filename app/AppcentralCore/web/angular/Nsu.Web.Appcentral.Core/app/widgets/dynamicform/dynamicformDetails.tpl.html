@@ -1,0 +1,80 @@
+﻿<div class="row">
+    <div class="event-details">
+        <div ng-repeat="field in fields | orderBy:'order'">
+
+            <ng-switch on="field.type">
+                <h3 ng-switch-when="header" class="col-md-12"  ng-if="!field.private">
+                    {{field.name}}
+                </h3>
+
+                <div ng-if='field.value && field.value !=""' ng-switch-default class="input {{field.type}}"
+                     ng-class="field.required && 'required'" ng-if="!field.private">
+
+                    <div class="form-group {{field.width}}" ng-class="{'newrow' : field.newrow}">
+                        <label>{{field.name}}&nbsp;</label>
+
+                        <ng-switch on="field.type">
+
+                            <div ng-switch-default>
+                                <div class="custom-control" id="{{field.id}}"
+                                       ng-model="field.value">
+                                   	{{field.value}}
+                               	</div>
+                            </div>
+
+                            <div ng-switch-when="checkbox">
+                                    <div class="custom-control" id="{{field.id}}" ng-show="field.value == 'true'">
+                                       	Yes
+                                    </div>
+                                    <div class="custom-control" id="{{field.id}}" ng-show="field.value != 'true'">
+                                       	No
+                                    </div>
+                            </div>
+
+                            <div class="custom-control" id="{{field.id}}"
+                                    ng-switch-when="multiple" ng-model="field.value">
+	                            <div ng-repeat="item in field.value">
+                                    {{item}}
+                                </div>
+                            </div>
+                            <div class="custom-control" id="{{field.id}}"
+                                    ng-switch-when="checkboxes">
+	                            <div ng-repeat="(key, value) in field.value">
+                                    <span ng-if="value">{{key}}</span>
+                                </div>
+                            </div> 
+                            <div class="custom-control" id="{{field.id}}"
+                                      ng-switch-when="WYSIWYGEditor" >
+                                <div ng-bind-html="field.value"></div>
+                            </div>
+                            <div class="custom-control" id="{{field.id}}"
+                                      ng-switch-when="paragraph">
+                                {{field.paragraph}}
+                            </div>
+<!--                             <div class="custom-control" id="{{field.id}}"
+                                      ng-switch-when="textarea" ng-model="field.value">
+                                {{field.value}}
+                            </div>
+
+
+                            <div class="custom-control" id="{{field.id}}"
+                                    ng-switch-when="select" ng-model="field.value">
+                                {{field.value}}
+                            </div>
+
+
+                            <div class="custom-control" id="{{field.id}}"
+                                    ng-switch-when="radio" ng-model="field.value">
+                                {{field.value}}
+                            </div>
+-->
+
+                            <nsu-bootsrap-date-picker class="custom-control" id="{{field.id}}" ng-switch-when="calendar" format="shortdate" />
+
+                        </ng-switch>
+                    </div>
+                </div>
+            </ng-switch>
+        </div>
+    </div>
+</div>

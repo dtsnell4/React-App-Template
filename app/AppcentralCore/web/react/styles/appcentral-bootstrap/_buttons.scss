@@ -1,0 +1,125 @@
+// Import vendor file
+@import "../twitter-boostrap/buttons";
+
+// Custom Overrides:
+
+.btn-outline-secondary {
+	color: inherit;
+}
+.btn-primary:hover:not(:disabled):not(.disabled) {
+	background-color: darken($primary, 15%);
+}
+.e-btn {
+	@extend .btn;
+}
+.for-rows {
+	display: inline-block;
+	white-space: nowrap;
+	font-weight: 600;
+	margin-bottom: $btn-block-spacing-y;
+	select.form-control {
+		width: auto;
+		display: inline;
+	}
+}
+
+.buttonscontainer, .buttons-container {
+	margin-top: 1rem;
+	width: 100%;
+	.left-buttons {
+		vertical-align: top;
+		.btn, .form-group {
+			margin: 0 0 $btn-block-spacing-y 0;
+			display: block;
+			width: 100%;
+		}
+	}
+	.right-buttons {
+		text-align:right;
+		vertical-align: top;
+		.btn, .form-group {
+			margin: 0 0 $btn-block-spacing-y 0;
+			display: block;
+			width: 100%;
+		}
+	}
+	&.buttons-footer {
+		margin-top: -1rem;
+		padding-top: 1rem;
+		padding-left: 1rem;
+        background-color: $gray-200;
+        border: 1px solid $gray-300;
+	}
+}
+
+@media (min-width:768px) {
+	.buttonscontainer {
+		display: table;
+		.left-buttons {
+			display: inline-flex;
+			.btn:not(.btn-block), .form-group {
+				margin: 0 $btn-block-spacing-x $btn-block-spacing-y 0;
+				display: inline-block;
+				width: auto;
+			}
+			> *:last-child {
+				margin-right: 0;
+			}
+		}
+		.right-buttons {
+			display: inline-flex;
+			float: right;
+			.btn:not(.btn-block), .form-group {
+				margin: 0 0 $btn-block-spacing-y $btn-block-spacing-x;
+				display: inline-block;
+				width: auto;
+			}
+			> *:first-child {
+				margin-left: 0;
+			}
+
+		}
+	}
+}
+
+
+// Syncfusion overrides
+.e-btn:not(.e-dropdown-btn), .e-css.e-btn:not(.e-dropdown-btn) {
+	transition:	 $btn-transition;
+	padding: $input-btn-padding-y $input-btn-padding-x;
+	border-radius: $border-radius;
+	font-size: $font-size-base;
+	line-height: $line-height-base;
+	&.e-primary {
+		background-color: $primary;
+		border-color: $primary;
+		color: $white;
+		&:hover, &:active {
+		    background-color: darken($primary, 10%);
+		    border-color: darken($primary, 10%);
+		}
+	}
+	&.e-file-clear-btn {
+		background-color: $secondary;
+		border-color: $secondary;
+		&:hover, &:active {
+		    background-color: darken($secondary, 10%);
+		    border-color: darken($secondary, 10%);
+		}
+	}
+}
+
+// Pill Buttons
+.btn.pill-button {
+	border-radius: 10px;
+	font-weight: bold;
+	font-size: 14px;
+	width: 155px;
+	margin-bottom: 10px;
+	&.disabled {
+		color: $black;
+		background-color: $gray-200;
+		border-color: $gray-200;
+		pointer-events: none;
+	}
+}

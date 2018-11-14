@@ -1,0 +1,22 @@
+﻿<div class="md-modal colored-header md-effect-10 md-show {{data.cssClasses}}" style="perspective: none;">
+  <div class="md-content">
+    <div class="modal-body">
+      <div class="text-center">
+        <div ng-if="data.type === 'remove'"  class="i-circle danger"> <i class="fa fa-trash"></i> </div>
+        <div ng-if="data.type === 'confirm'"  class="i-circle primary"> <i class="fa fa-check"></i> </div>
+        <h4>{{data.header}}</h4>
+        <p>{{data.text}}</p>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <div class="row">
+        <div class="col-md-6">
+          <button class="btn btn-block btn-default" ng-click="cancel()">Cancel</button>
+        </div>
+        <div class="col-md-6">
+          <button class="btn btn-block" ng-class="{remove:'btn-danger', confirm:'btn-primary'}[data.type]" ng-click="ok()">Confirm</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

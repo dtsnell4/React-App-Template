@@ -1,0 +1,61 @@
+// Import vendor file
+@import "../twitter-boostrap/dropdown";
+
+// Custom Overrides:
+
+.dropdown-menu-right {
+    right: 0;
+    left: auto;
+}
+.dropdown-menu-long {
+    max-height: calc(100vh - 80px);
+    overflow: auto;
+}
+.dropdown-menu-medium {
+    max-height: 60vh;
+    overflow: auto;
+}
+.dropdown-menu-short {
+    height: 40vh;
+    overflow: auto;
+}
+/* .dropdown-menu {
+    a button {
+    	color: $primary;
+    	&:not(:active):hover {
+    		color: darken($primary, 10%);
+    	}
+    }
+    .dropdown-item:active a {
+        color: $white;
+    }
+} */
+.dropdown {
+    > span {
+        cursor: pointer;
+    }
+    .dropdown-toggle:hover + .dropdown-menu {
+    	display: block;
+    }
+    .show .dropdown-menu {
+      display: block;
+    }
+    .dropdown-item {
+        cursor: pointer;
+        &:hover, &:focus {
+            background-color: $gray-300;
+        }
+        &:active {
+            background-color: $primary;
+            color: $white;
+        }
+        &:disabled {
+            cursor: not-allowed;
+        } 
+    }
+    .dropdown-menu {
+        top: 100% !important;
+        transform: none !important;
+        margin: 0 0 0 0;
+    }
+}

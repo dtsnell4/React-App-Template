@@ -1,0 +1,44 @@
+﻿
+<div class="container no-padding no-margin white-background-color border-bottom1">
+    <div class="content">
+
+        <div class="row itemBody">
+            <div class="col-sm-12">
+              
+                <div ng-if="vm.globalmessage">
+
+                    <h1 class="h1-font-weight">{{vm.globalmessage.subject}}</h1>
+                </div>
+
+                <div class="font-Grey">
+                    {{vm.globalmessage.header}}
+                </div>
+
+                <p class="p-details-message" ng-bind-html="vm.globalmessage.body | trustHtml">
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="attachments" ng-if="vm.globalmessage.attachments.length > 0">
+        {{vm.globalmessage.attachments.length}} Attachments
+    </div>
+</div>
+
+<div class="content">
+    <div class="main-app">
+        <div class="items products">
+            <div class="item  btn-grey" ng-repeat="file in vm.globalmessage.attachments">
+                <div>
+                    <a href="{{vm.globalmessage.fileurl}}/{{file.fileId}}">
+                        <span class="pull-right font-White"><i class="fa fa-download fa-2x"></i></span>
+                        <i class="fa fa-2x fileImage" ng-class="vm.getFileImage(file.name)"></i>
+                        <h4 class="from font-White">{{file.name}} </h4>
+                        <p class="msg font-White">{{file.size | filesize }}</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

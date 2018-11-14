@@ -1,0 +1,31 @@
+﻿<div class="block-flat">
+    <div class="header">
+        <h3>{{help.appname}} Help</h3>
+    </div>
+    <div class="row">
+        <div class="col-sm-10">
+            <div id="htmlContent"></div>
+        </div>
+    </div>
+    <div class="header">
+    </div>
+    <div class="row">
+        <h4>&nbsp;&nbsp;Attachments:</h4>
+    </div>
+    <div class="row">
+        <div class="col-sm-10" ng-repeat="file in help.files">
+            <div class="form-group required">
+                <div ng-form name="innerItemForm" class="ng-pristine ng-valid ng-valid-required ng-valid-maxlength">
+                    <div ng-if="file.isImage == false">
+                        <span class="fa fa-file-text-o" aria-hidden="true"></span> <a ng-href="{{help.url}}/{{file.file.id}}/{{file.file.name}}">{{file.file.name}}</a>
+                    </div>
+                    <div ng-if="file.isImage == true">
+                        <a ng-href="{{help.url}}/{{file.file.id}}/{{file.file.name}}">
+                            <img width="50%" src="{{help.url}}/{{file.file.id}}/{{file.file.name}}"/><br>{{file.file.name}}
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

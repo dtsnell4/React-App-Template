@@ -1,0 +1,35 @@
+﻿<div class="head" style="border-bottom: 1px solid #e5e5e5;">
+    <div class="subject form-group required">
+
+        <input name="subject" ng-maxlength="96" type="text" ng-model="vm.message.subject" placeholder="Enter your subject here"  required />
+        <!--<div ng-messages="messageform.subject.$error" ng-show="messageform.subject.$error && messageform.subject.$dirty" ng-messages-include="error-messages"></div>--->
+
+    </div>
+</div>
+
+
+
+
+<style>
+    ::-webkit-input-placeholder {
+    color: black;
+    font-weight: 600;
+    opacity: 1 !important; /* for chrome */
+}
+
+:-moz-placeholder { /* Firefox 18- */
+    color: black;
+    font-weight: 600;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+    color: black;
+    font-weight: 600;
+}
+
+:-ms-input-placeholder {  
+   color: black;
+   font-weight: 600;
+}
+
+</style>

@@ -1,0 +1,20 @@
+﻿<div class="panel panel-default">
+    <div class="panel-heading course-wizard-blue">
+        <h4 class="panel-title">
+            <a href="" tabindex="0" class="accordion-toggle" ng-click="toggleOpen()" accordion-transclude2="heading">
+                <span class="span-width">
+                    {{heading}}
+                    <i class="pull-right glyphicon icon-right" ng-class="{'glyphicon glyphicon-chevron-up': isOpen, 'glyphicon glyphicon-chevron-down': !isOpen}"></i>
+                </span>
+            </a>
+        </h4>
+    </div>
+    <div class="panel-description description-padding">
+        <span class="panel-description">
+            <strong>Description:</strong><br />{{description}}
+        </span>
+    </div>
+    <div class="panel-collapse collapse" collapse="!isOpen">
+        <div class="panel-body panel-border" ng-transclude></div>
+    </div>
+</div>

@@ -1,0 +1,105 @@
+<div class="col-md-6">
+<div class="block-flat">
+<div class="header">
+<h3 class="break-word" ng-if="config.loaded">{{config.title}}</h3>
+<h3 ng-if="!config.loaded">{{config.titleEmpty}}</h3>
+</div>
+<p ng-if="config.loaded"> {{config.help}} </p>
+<div class="row" ng-if="config.loaded">
+<div class="col-md-12">
+<form class="search-form">
+<div class="input-group">
+<input class="form-control" type="text" id="search" searchtype="text" ng-model="pane.search.name" placeholder="Search...">
+<span class="input-group-addon btn-primary">
+<span class="nsu-search"></span>
+</span>
+</div>
+</form>
+</div>
+</div>
+<div class="row no-margin-top" ng-if="config.loaded">
+<div class="col-md-12">
+<div class="pull-right btn-group margin-top10px" ng-if="config.actions.globalactivate">
+<input ng-model="config.globalactive"
+ng-class="btn-primary"
+id="check"
+bs-switch
+switch-size="small"
+switch-active="true"
+switch-on-text="On"
+switch-off-text="Off"
+switch-label-width="20px"
+switch-handle-width="20px"
+type="checkbox"
+ng-change="pane.call(config.actions.globalactivate)"
+access="{{config.actions.globalactivate.permissions}}" />
+</div>
+<div class="pull-right" ng-if="config.actions.removeall && config.actions.addall">
+<div class="btn-group course-wizard btn-group-sm margin-top10px ng-scope" role="group" >
+<label ng-if="config.actions.removeall && config.actions.addall"
+class="btn btn-primary nohover whitebg-hover no-border" access="{{config.actions.addall.permissions}}">All</label>
+<label
+ng-if="config.actions.addall"
+type="button"
+title="{{config.tooltip}}"
+access="{{config.actions.addall.permissions}}"
+ng-disabled="config.disableButton == 'true'"
+class="btn btn-success btn-trans"
+ng-click="pane.call(config.actions.addall)"
+value="{{config.actions.addall.name}}" >{{config.actions.addall.name}}</label>
+<label
+ng-if="config.actions.removeall"
+type="button"
+title="{{config.tooltip}}"
+access="{{config.actions.removeall.permissions}}"
+ng-disabled="config.disableButton == 'true'"
+class="btn btn-warning btn-trans"
+ng-click="pane.call(config.actions.removeall)"
+value="{{config.actions.removeall.name}}">{{config.actions.removeall.name}}</label>
+</div>
+</div>
+<div class="pull-right">
+<div class="margin-top10px ng-scope" ng-if="config.actions.add">
+<button
+type="button"
+title="{{config.tooltip}}"
+access="{{config.actions.add.permissions}}"
+ng-disabled="config.disableButton == 'true'"
+class="btn btn-primary"
+ng-click="pane.call(config.actions.add)"
+value="{{config.actions.add.name}}">{{config.actions.add.name}}</button>
+</div>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-md-12">
+<div class="list-group">
+<div ng-include="config.itemTemplate"
+ng-repeat="ent in pane.pagedCollection track by $index"
+class="list-group-item"
+ng-click="pane.selectItem(ent)"
+ng-class="{'highlight': ent.highlight,'active': ent.id === item.id }"></div>
+<div class="list-group group-border-dashed" ng-if="pane.pagedCollection.length === 0">
+<h3 id="selectgroup"> {{config.helpEmpty}} <span ng-if="config.titleEmpty.indexOf('Loading')" class="fa fa-arrow-circle-left fa-3x"></span> </h3>
+
+
+</div>
+</div>
+</div>
+</div>
+<div class="row" ng-if="pane.pagedCollection.length > 0">
+<div class="col-md-12">
+<div class="pull-left">
+<div class="pagination"> 
+<span>{{pane.firstItem}} to {{pane.lastItem < pane.totalItmes? pane.lastItem: pane.totalItmes}} of {{pane.totalItmes}}</span> 
+</div>
+</div>
+<div class="pull-right">
+<div pagination total-items="pane.totalItmes" ng-model="pane.page" ng-change="pane.refresh()" ng-if="pane.pagedCollection.length > 0" num-pages="pane.pages"></div>
+</div>
+<div class="clearfix"></div>
+</div>
+</div>
+</div>
+</div>

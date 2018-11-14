@@ -1,0 +1,369 @@
+// Import vendor file
+@import "../twitter-boostrap/modal";
+
+// Custom Overrides:
+.modal-header .modal-title {
+	color: #fff;
+	font-size: $h4-font-size;
+}
+.modal-footer {
+    display: block;
+    -webkit-border-radius: 0 0 0 0;
+}
+
+.i-circle {
+	i {
+		font-size: 44px;
+	}
+	&.warning i {
+		color: $warning;
+	}
+	&.danger i {
+		color: $danger;
+	}
+	&.primary i {
+		color: $primary;
+	}
+	&.success i {
+		color: $success;
+	}
+
+}
+
+
+// For ReduxFormReviewComponent in frd
+.hr-line {
+    margin-left: -1rem;
+    margin-right: -1rem;
+}
+.btn-group{
+	border-radius: 4px;
+}
+.radio-btns {
+    label {
+		margin-right: 1rem;
+		input{
+			background-color:$white;
+		}
+    }
+}
+.txt-area{
+	textarea{
+		width:100%;
+		border:none;
+		font-size:20px;
+		&:focus{
+			outline:none;
+		}
+	}	
+}
+.modal-footer {
+	.buttons-container, .buttonscontainer {
+		margin-top: 0;
+		.right-buttons, .left-buttons {
+			.btn {
+				margin-bottom: 0px;
+			}
+		}
+	}
+}
+
+// Modal Box for Syncfusion Grid's Dialog Box
+.control-section{
+    &.sync-modal{
+		.e-toolbar{
+			.e-toolbar-items{
+				display:flex;
+				justify-content: flex-end;
+				margin-bottom:0rem;
+				.e-toolbar-item{
+					background:none;
+					margin-right:1.5rem!important;
+					&.e-overlay{
+						background:none;
+					}
+				}
+				.e-tbar-btn{
+					border:none!important;
+					padding:0px!important;
+					background:transparent!important;
+					box-shadow: none;
+					&:hover{
+						background:transparent;						
+					}	
+					.e-tbar-btn-text{
+						color:black!important;
+						font-size: large;
+						padding-left:1px;
+						padding-right:0px;
+					}
+				}
+				div:first-child:before{
+					padding-top: 2px;
+					font-family: FontAwesome;
+					content: "\f067";
+				}
+				div:nth-of-type(2):before{
+					padding-top: 2px;
+					font-family: FontAwesome;
+					content: "\f044";
+				}
+				div:nth-of-type(3):before{
+					font-family: FontAwesome;
+					content: "\f1f8";
+				}
+			}
+		}
+		.e-dlg-container{  
+			z-index: 1021!important;
+            .e-dlg-overlay{
+				position:fixed!important;
+            }          
+		}
+		.e-gridheader{
+			background-color: #f8f8f8!important;
+			table{
+				thead{
+					tr{
+						th{
+							background-color: #f8f8f8!important;
+						}
+					}
+				}
+			}
+		}
+		.e-dialog {
+			left: auto!important;
+			top: 8%!important;
+			position: fixed!important;
+			width: 55%!important;
+			max-width: 756px!important;
+			pointer-events: auto!important;
+			box-shadow:none;
+			max-height:unset!important;
+			min-height:unset;
+			border:unset;
+			.e-dlg-header-content{
+				display: flex;
+				flex-direction: row-reverse;
+    			align-items: flex-start;
+    			justify-content: space-between;
+				padding: 1rem;
+				border-bottom: 5px solid #368fcb !important;
+   				background-color: #4aa3df;
+				font-size: 1rem;
+    			font-weight: 400;
+    			line-height: 1.5;
+				text-align: left;
+				.e-dlg-header{
+					color: #fff;
+				}
+			}
+			.e-dlg-content{
+				padding:0px;
+				.e-table{
+					tbody{
+						display:flex;
+						flex-direction: column-reverse;
+					}
+					tr:nth-child(2){
+						background-color:#fff;
+						border-bottom: 1px solid #e6e6e6;
+						td{
+							width:1000px !important;	
+						}
+						textarea{
+							margin-top:0px;
+							font-size:15px;
+							height:8rem;
+						}						
+					}
+					tr:nth-child(1){
+						input[type='checkbox']{
+							float:left;
+							width:20px;
+							&:after{
+								content: 'Include in this term';
+								display: inline-block;
+								padding-left: 30px;
+								width: 200px;
+								font-size:15px;
+							}
+						}
+					}
+				}				
+				.e-field{
+					width:100%;
+					margin-top:1rem;
+					height:5rem;
+					border:none;
+				}
+			}
+			.e-footer-content{
+				display:inline-flex;
+				flex-direction: row-reverse;
+				border-bottom-left-radius: 0px;
+				border-bottom-right-radius: 0px;
+				.e-btn{
+					color: #fff;				
+					padding: 0.25rem 0.5rem;
+    				font-size: 0.875rem;
+					line-height: 1.5;
+					width: 25% !important;
+    				font-weight: 400;
+    				text-align: center;
+    				white-space: nowrap;
+    				vertical-align: middle;
+    				user-select: none;
+    				border: 1px solid transparent;
+    				transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+				}
+				.e-primary{
+					background-color:$primary;
+					border-color:$primary;
+				}
+				.e-primary:hover{
+					background-color: #337ab7;
+				}
+				.e-flat{
+					color: #fff;
+    				background-color:rgb(134, 142, 150);
+					border-color:rgb(134, 142, 150);
+				}
+				.e-flat:hover{
+					background-color: #6c757d;
+				}
+			}
+		}
+		div[id$=_0EditConfirm]{
+			border:none!important;
+			max-height: 340px!important;
+			.e-dlg-content{
+				display:flex;
+				flex-direction:column;
+				align-items: center;
+				div{
+					font-size: 24px;
+					font-weight:bold;
+				}
+				&:before{
+					font-family: FontAwesome;
+					content: "\f1f8";
+					font-size: 40px;
+					color:$danger;
+					margin-top:50px;
+					margin-bottom:25px;
+					padding: 4px 12px;
+					border: 3px solid rgb(224, 224, 224);
+					border-radius:35px;
+				}
+				&:after{
+					content:"Deleting the qualification will remove it from the qualification list. Do you wish to proceed?";
+					margin-bottom:25px;
+					text-align:center;
+					font-size: 16px;
+					line-height: 300%;
+				}				
+			}
+			.e-footer-content{
+				background-color:#f8f9fa;
+				.e-btn{
+					width:50%!important;
+					&:first-child{
+						background-color:$danger;
+						border:1px solid $danger;
+					}
+					&:last-child{
+						margin-left:0px;
+						background-color:#fff;
+						color:black;
+					}
+				}
+			}				
+		}
+		div[id$=_0EditAlert]{
+			border:none!important;			
+			max-height: 320px!important;
+			.e-dlg-content{
+				display:flex;
+				flex-direction:column;
+				justify-content: center;
+				align-items: center;
+				div{
+					display: none;
+				}
+				&:before{
+					font-family: FontAwesome;
+					content: "\f071";
+					font-size: 40px;
+					padding: 4px 8px;
+					border: 3px solid rgb(224, 224, 224);
+					color:$warning;
+					border: 3px solid rgb(224, 224, 224);
+					border-radius:35px;
+					margin-top:50px;
+					margin-bottom:25px;
+				}
+				&:after{
+					content:"No records selected for the operation";
+					white-space:pre-line;
+					text-align:center;
+					font-size: 18px;
+					margin-bottom:25px;
+				}
+			}
+			.e-footer-content{
+				background-color:#f8f9fa;
+				.e-btn{
+					width:40%!important;
+					background-color: $primary;
+					color:white;
+					border:2px solid $primary;
+					&:hover{
+						background-color:$primary;
+					}
+				}
+			}
+		}		
+    }
+}
+
+
+// Modal for Redux Toaster
+.rrt-confirm-holder {
+	.rrt-confirm {
+	    width: 695px;
+	    border-radius: 0px;
+	    left: 25%;
+	    margin-left: 0;
+		.rrt-buttons-holder {
+			background: #fbfbfb;
+			border-top: 1px solid #e9ecef;
+		    flex-direction: row-reverse;
+		    padding: 1rem;
+		    .rrt-button {
+		    	height: initial;
+		    	padding: .375rem .75rem;
+		    	border-top: none;
+		    	font-size: 1rem;
+		    	transition: .5s all;
+			    &.rrt-ok-btn {
+			    	background-color: $warning;
+			    	&:hover, &:focus, &:active {
+					    background-color: darken($warning, 10%);
+					    color: initial;
+					}
+					margin-left: .5rem;
+			    }
+			    &.rrt-cancel-btn {
+			    	background-color: $secondary;
+			    	&:hover, &:focus, &:active {
+					    background-color: lighten($secondary, 10%);
+					    color: initial;
+					}
+					margin-right: .5rem;
+			    }
+		    }
+		}
+	}
+}

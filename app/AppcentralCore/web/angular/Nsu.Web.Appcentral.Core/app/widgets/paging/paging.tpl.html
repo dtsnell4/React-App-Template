@@ -1,0 +1,12 @@
+﻿<div class="dataTables_paginate paging_bs_normal">
+
+
+
+    <ul class="pagination">
+        <li ng-class="paging.prevPageDisabled()"><a href="#" ng-click="paging.prevPage()"><i class="fa fa-angle-left"></i>&nbsp;Previous</a></li>
+        <li ng-repeat="n in paging.range()" ng-class="{active: n == paging.currentPage}" ng-click="paging.setPage(n)"><a href="#">{{n}}</a></li>
+        <li ng-class="paging.nextPageDisabled()"><a href="#" ng-click="paging.nextPage()">Next&nbsp;<i class="fa fa-angle-right"></i></a></li>
+    </ul>
+
+
+</div>

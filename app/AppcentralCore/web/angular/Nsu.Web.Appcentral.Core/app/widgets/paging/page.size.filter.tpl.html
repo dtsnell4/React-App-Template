@@ -1,0 +1,7 @@
+﻿<div id="datatable_length">
+  <label> <span>Show&nbsp;</span>
+    <select ng-model="pagesize.pageSize" class="btn btn-flat btn-default dropdown-toggle" ng-change="pagesize.pageSizing()">
+      <option ng-repeat="option in pagesize.options" ng-selected="(option.value === pagesize.selectedPageSize)" value="{{option.value}}">{{option.name}}</option>
+    </select>
+    <span>&nbsp; Rows </span> </label>
+</div>

@@ -1,0 +1,5 @@
+#toast-container > div {
+	border-radius: 0px;
+	padding: 15px 15px 5px 5px;
+	width: 300px;
+}

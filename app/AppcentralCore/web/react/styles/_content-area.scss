@@ -1,0 +1,86 @@
+// Main content area inside all appcentral apps.
+
+#cl-wrapper, body {
+    height: 100%;
+}
+#pcont, body {
+    position: relative;
+}
+.loading-bar {
+    position: absolute;
+    width: 100vw;
+    z-index: 10;
+}
+.cl-mcont {
+    background-color: #f0f0f0;
+    color: inherit;
+    padding: 15px 15px 30px;
+    margin-top: 0;
+}
+.appnav.navbar {
+    border-bottom: 1px solid #e0e4e8;
+}
+.block-flat {
+	margin-bottom: 15px;
+}
+.header {
+    border-bottom: 1px solid #dadada; 
+}
+
+// Filters Container
+.filters-parent {
+    display: -webkit-flex;
+    -webkit-flex-direction: column;
+    display: flex;
+    flex-direction: column; 
+    .filters-container {
+        display: block;
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+    .filters-content {
+        display: block;
+        width: 100%;
+    }
+}
+@media (min-width:768px) {
+    .filters-parent {
+        width: 100%;
+        -webkit-flex-direction: row;
+        flex-direction: row;
+        &.filters-left {
+            -webkit-flex-direction: row-reverse;
+            flex-direction: row-reverse; 
+            .filters-container {
+                padding-left: 1rem;
+            }
+            .filters-content {
+                padding-left: 0;
+            }
+        }
+        .filters-container {
+            max-width: 300px;
+        }
+        .filters-content {
+            padding-left: 1rem;
+        }
+    }
+}
+// End Filters Container
+.dashed-message {
+    // padding: 80px;
+    padding: 10% 20%;
+    border-style: dotted;
+    border-color: #dcdcdc;
+    text-align: center;
+    font-size: 2rem;
+    div {
+    	margin: 0 auto;
+    	max-width: 460px;
+    }
+    .fa {
+	    color: #4aa3df;
+	    display: block;
+	    margin-top: 30px;
+	}
+}

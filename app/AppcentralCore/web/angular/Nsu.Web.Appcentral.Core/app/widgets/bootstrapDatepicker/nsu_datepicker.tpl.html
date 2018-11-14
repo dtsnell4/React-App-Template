@@ -1,0 +1,7 @@
+<div class='input-group date nsudatapicker'>
+    <input type='text' class="form-control" readonly />
+    <span class="input-group-addon">	
+        <span ng-if="!vm.options && !vm.options.icons && !vm.options.icons.date" class="glyphicon glyphicon-calendar"></span>
+		<span ng-if="vm.options && vm.options.icons && vm.options.icons.date" ng-class="vm.options.icons.date"></span>
+    </span>
+</div>

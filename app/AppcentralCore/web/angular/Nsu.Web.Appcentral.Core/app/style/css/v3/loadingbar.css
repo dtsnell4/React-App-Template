@@ -1,0 +1,36 @@
+﻿#loading-bar .bar {
+    background: #ff3333 !important;
+}
+#loading-bar .peg {
+    -moz-box-shadow: #f66 1px 0 6px 1px !important;
+    -ms-box-shadow: #f66 1px 0 6px 1px !important;
+    -webkit-box-shadow: #f66 1px 0 6px 1px !important;
+    box-shadow: #f66 1px 0 6px 1px !important;
+}
+#loading-bar-spinner {
+    display: NONE;
+    position: absolute;
+    z-index: 10002;
+    top: 24px;
+    left: 103px;
+}
+#loading-bar-spinner .spinner-icon {
+        width: 23px;
+        height: 23px;
+        border: solid 4px transparent;
+        border-top-color: #fff;
+        border-left-color: #ddd;
+        border-radius: 10px;
+    }
+@media (max-width: 979px) and (min-width: 768px) {
+    #loading-bar-spinner {
+        top: 19px;
+        left: 23px;
+    }
+}
+
+@media (max-width: 768px) {
+    #loading-bar-spinner {
+        display: none;
+    }
+}

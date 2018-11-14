@@ -1,0 +1,39 @@
+﻿<div class="col-sm-6"> 
+    <div class="control-group" id="populationDropdown">
+        <div class="controls">
+            <ui-select ng-model="options"
+                       style="display: none;"
+                       id="multiDropdown"
+                       multiple="multiple"
+                       class="col-sm-2 hidden"
+                       name="items"
+                       multiselect
+                       ng-required="true"
+                       ui-validate="{required: 'selectedModel.$isEmpty($value)'}">
+                <option ng-repeat=" items in options" value="{{items.id}}"></option>
+            </ui-select>
+            
+            <div class="btn-group">
+                <button type="button" class="multiselect dropdown-toggle btn btn-default" data-toggle="dropdown" type="button"
+                        title="Population" aria-expanded="true">
+                    {{getButtonText()}}
+                    <b class="caret"></b>
+                </button>
+
+                <ul class="multiselect-container dropdown-menu" ng-click="$event.stopPropagation();">
+                    <li ng-repeat="item in options">
+                        <a class="multiselect" href="javascript:void(0);">
+                            <label class="checkbox">
+                                <input value={{item}}
+                                       type="checkbox"
+                                       ng-checked="isChecked(getPropertyForObject(item,settings.idProp))"
+                                       ng-click="checkboxClick($event, getPropertyForObject(item,settings.idProp))" />
+                                {{getPropertyForObject(item, settings.displayProp)}}
+                            </label>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

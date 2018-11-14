@@ -1,0 +1,60 @@
+﻿<div class="{{help.remove ? 'md-modal colored-header danger md-effect-12 md-show' : ''}}">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close" ng-click="help.cancel()"><span aria-hidden="true">&times;</span></button>
+        <h3 class="modal-title modal-header-primary break-word">Edit Help {{help.appname}}</h3>
+    </div>
+    <div class="modal-body" ng-if="!help.remove">
+        <div class="form-horizontal">
+            <form novalidate name="instanceform" form-errors>
+                <fieldset>
+                    <div> {{help.note}}</div>
+
+                    <div class="form-group required">
+                        <div class="col-sm-2">
+                            <label class=" control-label" style="display:block;">Content:</label>
+
+                        </div>
+                        <div class="col-sm-10">
+
+
+
+                            <div summernote id="content" ng-model="help.content" config="help.options" ng-maxlength="8000"></div>
+
+
+                            <div ng-messages="instanceform.description.$error" ng-show="instanceform.description.$error && instanceform.description.$dirty"
+                                 ng-messages-include="error-messages">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content">
+
+                        <div class="col-sm-10" ng-repeat="file in help.files">
+                            <div class="form-group required">
+                                <div ng-form name="innerItemForm" class="ng-pristine ng-valid ng-valid-required ng-valid-maxlength">
+                                    <div class="col-sm-2">
+                                    </div>
+                                    <div class="col-sm-8" style="padding-left: 0" upload url="help.url" ng-model="file.file" uploading="vm.uploading"></div>
+                                    <div class="col-sm-2" ng-click="help.insert(file)" ng-if="file.insert">
+                                        <div class="btn">{{file.insert}}</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <div class="alert alert-danger alert-white rounded" ng-if="help.error != 'cancel' && help.error != undefined">
+                    <div class="icon">
+                        <i class="fa fa-times-circle"></i>
+                    </div>
+                    <strong>Error!</strong> {{help.error}}
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-default" ng-click="help.cancel()">Cancel</button>
+                    <button class="btn btn-primary" ng-click="help.ok()">Save</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+</div>

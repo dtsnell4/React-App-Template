@@ -1,0 +1,11 @@
+﻿.list-group .active button {
+	display:none;
+}
+.list-group.striped .list-group-item:nth-child(2n) {
+    background-color: #f8f8f8;
+}
+.list-group-item:hover i.hidden {
+    display: inline-block !important;
+    margin-top: 3px;
+    font-size: 20px;
+}

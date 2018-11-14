@@ -1,0 +1,23 @@
+// Import vendor file
+@import "../twitter-boostrap/pagination";
+
+// .paginator-container {
+// 	margin: 1.5rem 0;
+// }
+
+// Custom Overrides:
+
+.paginator-container{
+	margin: 1.5rem 0;
+    @media screen and (max-width: 576px){
+        display: flex;
+        flex-direction: column;
+	}
+	.page-count {
+		margin: 5px 0 10px 0;
+		display: inline-block;
+	}
+	.pagination {
+		display: inline-flex;
+	}
+}

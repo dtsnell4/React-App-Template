@@ -1,0 +1,726 @@
+﻿.syllabi-container {
+	padding: 20px;
+	border: solid 1px #c6c6c6;
+	background-color: #fff;
+}
+.syllabi-preview {
+	padding-right: 40px;
+	padding-bottom: 50px;
+	margin: 15px 0 0 10px;
+}
+.syllabi-preview object, .syllabi-preview p {
+	line-height: 1.3em;
+}
+.syllabi-preview p {
+	margin: 0 0 7px;
+}
+.syllabi-preview .editable {
+	display: inline-block;
+	padding: 5px 20px 5px 5px;
+	min-height: 40px;
+	min-width: 40%;
+	margin-top:10px;
+	background: #ffffcc;
+	border: dotted 1px #eee;
+	margin-left: 5px;
+	position: relative;
+	text-align: initial;
+ 	/*border: 2px solid #104B9E;*/
+}
+.syllabi-preview .editable:hover {
+	/*background: #ffeb3b url(//www.nova.edu/_files/images/nsu-edit.png) no-repeat;
+	background-position: top 5px right 5px;*/
+	color: #111 !important; 
+	cursor: pointer;
+	background-color: rgba(16,75,158,.1);
+}
+.syllabi-preview .editable:after {
+	display: inline;
+	font: normal normal normal 20px/1 FontAwesome;
+	font-size: inherit;
+	content: "";
+	position: absolute;
+	top: 3px;
+	right: 5px;
+}
+.syllabi-preview .editable:hover:after {
+	content: "\f040";
+	color: #0f2a56; /*0287cc*/
+}
+.syllabi-preview .editable.hierarchy-nsu {
+        background: #E6E6FA;
+}
+.syllabi-preview .editable.hierarchy-college {
+        background: #7FFFD4;
+}
+.syllabi-preview .editable.hierarchy-template {
+        background: #ADD8E6;
+}
+.syllabi-preview .editable.hierarchy-course {
+        background: #FFDAB9;
+}
+/*.syllabi-preview .editable.hierarchy-nsu {
+	border-color: #3E3585;
+}
+.syllabi-preview .editable.hierarchy-college {
+	border-color: #270CF6;
+}
+.syllabi-preview .editable.hierarchy-template {
+	border-color: #EB9B00;
+}
+.syllabi-preview .editable.hierarchy-course {
+	border-color: #478DEE;
+}
+.syllabi-preview .editable.hierarchy-nsu:hover {
+    background-color: rgba(39,12,246,.1);
+}
+.syllabi-preview .editable.hierarchy-college:hover {
+    background-color: rgba(62,53,133,.1);
+}
+.syllabi-preview .editable.hierarchy-template:hover {
+    background-color: rgba(235,155,0,.2);
+}
+.syllabi-preview .editable.hierarchy-course:hover {
+    background-color: rgba(71,141,238,.1);
+}*/
+.syllabi-preview h1, .fr-wrapper h1 {
+	font-size:27px;
+	line-height: 1.1em;
+	margin: 0;
+	font-weight: 600;
+	margin-top: 11px;
+}
+.syllabi-preview h2, .fr-wrapper h2 {
+	font-size:24px;
+	line-height: 1.1em;
+	margin: 0;
+	font-weight: 600;
+	margin-top: 11px;
+}
+.syllabi-preview h3, .fr-wrapper h3 {
+	font-size:21px;
+	line-height: 1.1em;
+	margin: 0;
+	font-weight: 600;
+	margin-top: 11px;
+}
+.syllabi-preview h4, .fr-wrapper h4 {
+	font-size:17px;
+	line-height: 1.1em;
+	margin: 0;
+	font-weight: 600;
+	margin-top: 11px;
+}
+.syllabi-preview label, .fr-wrapper label {
+	margin-bottom: 0px;
+	margin-right: 10px;
+}
+.syllabi-preview > li {
+	color: #000;
+	font-size: 16pt;
+}
+.syllabi-preview li {
+	line-height: 1.3em !important;
+}
+.syllabi-preview li p {
+	margin-bottom: 0px;
+}
+.syllabi-preview > li div, .fr-wrapper {
+	font-size: 13px !important;
+}
+.syllabi-preview ul > li {
+	list-style-type: disc;
+}
+.syllabi-preview ul > li > ul > li {
+	list-style-type: circle;
+}
+.syllabi-preview ul > li > ul > li > ul > li {
+	list-style-type: square;
+}
+.syllabi-preview ol > li > ol > li {
+	list-style-type: lower-alpha;
+}
+.syllabi-preview ol > li > ol > li > ol > li {
+	list-style-type: lower-roman;
+}
+.syllabi-preview ul {
+	padding-left: 35px;
+}
+.syllabi-preview ol {
+	padding-left: 30px;
+}
+.syllabi-preview table ol, .fr-wrapper table ol {
+	padding-left: 10px;
+}
+.syllabi-preview table ul, .fr-wrapper table ul {
+	padding-left: 16px;
+}
+.modal-content .fr-wrapper h3 {
+    display: block;
+}
+.syllabi-preview p > br, .fr-wrapper p > br, .syllabi-preview p:empty {
+	display:none;
+}
+.syllabi-preview .hangingindent, .fr-wrapper .hangingindent {
+  padding-left: 20px ;
+  text-indent: -20px ;
+}
+.fr-wrapper .small,
+.syllabi-preview .small, 
+.syllabi-preview .small *, 
+.syllabi-preview p.small,
+.syllabi-preview span.small, 
+.syllabi-preview label.small,
+.syllabi-preview table.small *, 
+.syllabi-preview table .small {
+	font-size: 7pt !important;
+}
+.fr-wrapper .lineheight15,
+.syllabi-preview .lineheight15, 
+.syllabi-preview .lineheight15 *, 
+.syllabi-preview p.lineheight15, 
+.syllabi-preview span.lineheight15,
+.syllabi-preview label.lineheight15,
+.syllabi-preview table.lineheight15 *, 
+.syllabi-preview table .lineheight15 {
+	line-height: 1.95 !important;
+}
+.fr-wrapper  .lineheight20,
+.syllabi-preview .lineheight20, 
+.syllabi-preview .lineheight20 *, 
+.syllabi-preview p.lineheight20,
+.syllabi-preview span.lineheight20,
+.syllabi-preview label.lineheight20,
+.syllabi-preview table.lineheight20 *, 
+.syllabi-preview table .lineheight20 {
+	line-height: 2.6em !important;
+}
+
+
+.fr-wrapper table,
+.fr-wrapper td, 
+.fr-wrapper th, 
+.fr-wrapper table p, 
+.fr-wrapper table ul, 
+.fr-wrapper table li, 
+.fr-wrapper table ol,
+.syllabi-preview table,
+.syllabi-preview td, 
+.syllabi-preview th, 
+.syllabi-preview table p, 
+.syllabi-preview table ul, 
+.syllabi-preview table li, 
+.syllabi-preview table ol {
+	font-size: 11px !important;
+}
+.syllabi-preview table tr:nth-child(2n) {
+	background: none;
+}
+.syllabi-preview table.rotate {
+    height: 100%!important;
+    margin: 20%!important;
+    width: 50%!important;
+	transform: rotate(-90deg) !important;
+	-webkit-transform: rotate(-90deg)!important;
+	-moz-transform: rotate(-90deg)!important;
+	-o-transform: rotate(-90deg)!important;
+}
+.syllabi-preview td > table {
+	margin: 10px;
+	width: 98%;
+}
+.syllabi-preview table a {
+	word-break: break-all;
+}
+.syllabi-preview hr {
+	width: 100%;
+    display: inline-block;
+}
+.syllabi-preview hr.break {
+	background-color: #fff;
+	border-top: 2px dashed #8c8b8b;
+}
+.syllabi-preview table, .syllabi-preview td, .syllabi-preview th, .fr-wrapper td {
+	border: 1px solid #000 !important;
+	border-collapse: collapse;
+	padding: 5px;
+	vertical-align: top;
+}
+.syllabi-preview .header {
+	border: none;
+}
+.syllabi-preview table.half {
+	width: 50% !important;
+	margin: 0 auto;
+}
+.syllabi-preview table.borderless, .syllabi-preview table.borderless td, .syllabi-preview table.borderless th {
+	border: none !important;
+}
+.syllabi-preview table.fullwidth {
+	width: 100%;
+}
+
+.modal-dialog textarea.fr-code {
+	height: 300px !important;
+	max-height: 300px !important;
+}
+.modal-dialog .nav-tabs {
+  	border-bottom: 1px solid #ddd;
+}
+.modal-dialog .landscape-toggle {
+   	padding-bottom: 7px
+}
+.modal-dialog .fr-code-view.fr-box.fr-basic .fr-element {
+  	display: none;
+}
+.modal-dialog .fr-code-view.fr-box.fr-basic .fr-wrapper {
+	overflow: initial !important;
+}
+.modal-dialog .tab-content {
+	margin-bottom: 0px;
+	background-color: #fff;
+	border:none;
+	box-shadow: none;
+	padding: 20px 0 0;
+}
+.fr-wrapper, .fr-wrapper p {
+	line-height: 1.3em;
+}
+.fr-wrapper p {
+    margin: 0;
+}
+@media (min-width: 901px) {		
+	.modal.fade .modal-dialog {
+	    width: 695px;
+		margin: 30px auto;
+	    transform : none !important;
+	    -webkit-transform : none !important;
+	    -moz-transform : none !important;
+	    -webkit-transition: width .2s !important; 
+	    transition: width .2s !important; 
+	}
+  	.modal.fade .modal-dialog.landscape {
+    	width: 910px;
+  	}
+}
+.syllabi-preview .block-title {
+	position:relative;
+	margin-left: -65px;
+}
+.syllabi-preview .block-title span {
+	display: inline-block;
+	width: 65px;
+	text-align: right;
+	padding-right: 5px;
+}
+#inline-editor-toolbar {
+	position: fixed;
+    bottom: 0;
+    right: 46px;
+    left: 326px;
+    background-color: #fff;
+    padding: 0 20px;
+    padding-bottom: 10px;
+    box-shadow: 0 -3px 11px -3px rgba(0,0,0,.5);
+}
+.sb-collapsed #inline-editor-toolbar {
+	left: 116px;
+}
+@media (max-width: 900px) {
+  	#cl-wrapper #inline-editor-toolbar {
+		left: 30px;
+		right: 30px;
+	}
+	#cl-wrapper #inline-editor-toolbar .buttonscontainer button.btn {
+		width: auto;
+		display: inline-block;
+		margin-bottom: 0 !important;
+	}
+	#cl-wrapper #inline-editor-toolbar .buttonscontainer .sm100p {
+		display: inline-block;
+		width: auto;
+	}
+	#cl-wrapper #inline-editor-toolbar .buttonscontainer .sm100p.rightbuttons {
+		float: right !important;
+	}
+	#cl-wrapper #inline-editor-toolbar .buttonscontainer .leftbuttons+.rightbuttons {
+		margin-top: 0;
+	}
+}
+.syllabi-preview pre, .fr-view pre {
+	font-family: inherit;
+	background-color: transparent;
+	border: none;
+	white-space: pre-wrap;
+    word-wrap: break-word;
+    padding: 0;
+    margin: 0;
+    font-size: 13px;
+    border-radius: 0;
+    /*line-height: 22px;*/
+}
+.syllabi-preview table pre, .fr-view table pre {
+	font-size: 11px;
+}
+.fr-element table td.fr-selected-cell, .fr-element table th.fr-selected-cell {
+    border: 1px double #1e88e5 !important;
+}
+/*
+*************************************************************************************************************************************************
+PDF CSS
+*************************************************************************************************************************************************
+*/
+
+.syllabi-pdf { 
+	text-rendering: optimizeLegibility; 
+	padding-left: 55px;
+}
+.syllabi-pdf object, .syllabi-pdf p {
+	line-height: 1.2em;
+}
+.syllabi-pdf .block-title {
+	margin-left: -72px;
+}
+.syllabi-pdf .block-title span {
+    display: inline-block;
+	width: 65px;
+	text-align: right;
+	padding-right: 5px;
+	font-size: 22px;
+	font-weight: 400;
+}
+.syllabi-pdf td > table {
+	margin: 10px;
+}
+.syllabi-pdf .hide-pdf {
+	display: none;
+}
+.syllabi-pdf li {
+	background-color: transparent;
+	color: #000;
+	font-size: 11pt;
+	line-height: 1.2em;
+}
+.syllabi-pdf li p {
+	margin-bottom: 0px;
+}
+.syllabi-pdf li ul li, .syllabi-pdf li ol li, .syllabi-pdf li ul li ul li, .syllabi-pdf li ol li ol li, .syllabi-pdf .header ol li, .syllabi-pdf .header ul li {
+	background-color: transparent;
+	color: #000;
+	font-size: 11pt;
+}
+.syllabi-pdf ul > li {
+	list-style-type: disc;
+}
+.syllabi-pdf ul > li > ul > li {
+	list-style-type: circle;
+}
+.syllabi-pdf ul > li > ul > li > ul > li {
+	list-style-type: square;
+}
+.syllabi-pdf ol > li > ol > li {
+	list-style-type: lower-alpha;
+}
+.syllabi-pdf ol > li > ol > li > ol > li {
+	list-style-type: lower-roman;
+}
+.syllabi-pdf ul {
+	padding-left: 35px;
+}
+.syllabi-pdf ol {
+	padding-left: 30px;
+}
+.syllabi-pdf table ol {
+	padding-left: 16px;
+}
+.syllabi-pdf table ul {
+	padding-left: 16px;
+}
+.syllabi-pdf {
+	font-size: 11pt;
+    line-height: 1.2em;
+    letter-spacing: 0.5pt;
+    text-rendering: optimizeLegibility;
+}
+.syllabi-pdf p {
+    margin: 0;
+    font-size: 11pt;
+}
+.syllabi-pdf p > br, .syllabi-pdf p:empty {
+	display:none;
+}
+.syllabi-pdf p p:last-child {
+	padding-bottom: 0px;
+	margin-bottom: 0px;
+}
+.syllabi-pdf label {
+	font-size: 11pt;
+	font-weight: bold;
+	margin-bottom: 15px;
+}
+.syllabi-pdf .hangingindent {
+	padding-left: 15pt ;
+	text-indent: -15pt ;
+}
+.syllabi-pdf .small, 
+.syllabi-pdf .small *, 
+.syllabi-pdf p.small,
+.syllabi-pdf span.small, 
+.syllabi-pdf label.small,
+.syllabi-pdf table.small *, 
+.syllabi-pdf table .small {
+	font-size: 7pt !important;
+}
+.syllabi-pdf .lineheight15, 
+.syllabi-pdf .lineheight15 *, 
+.syllabi-pdf p.lineheight15, 
+.syllabi-pdf span.lineheight15,
+.syllabi-pdf label.lineheight15,
+.syllabi-pdf table.lineheight15 *, 
+.syllabi-pdf table .lineheight15 {
+	line-height: 1.8em !important;
+}
+    
+    .syllabi-pdf .lineheight20,
+    .syllabi-pdf .lineheight20 *,
+    .syllabi-pdf p.lineheight20,
+    .syllabi-pdf span.lineheight20,
+    .syllabi-pdf label.lineheight20,
+    .syllabi-pdf table.lineheight20 *,
+    .syllabi-pdf table .lineheight20 {
+        line-height: 2.4em !important;
+    }
+.syllabi-pdf hr.break {
+    page-break-after:always;
+    background-color: none; 
+    border: none;
+}
+
+.syllabi-pdf hr:not(.break) {
+	width: 100%;
+    display: inline-block;
+}
+.syllabi-pdf h1 {
+	font-size: 27px;
+	margin: 0px;
+    line-height: 1.1em;
+    font-weight: bold;
+    margin-top: 10px;
+}
+.syllabi-pdf h2 {
+	font-size: 24px;
+	margin: 0px;
+    line-height: 1.1em;
+    font-weight: bold;
+    margin-top: 10px;
+}
+.syllabi-pdf h3 {
+	font-size: 21px;
+	margin: 0px;
+	line-height: 1.1em;
+	display:block;
+	clear:both;
+	font-weight: bold;
+    margin-top: 10px;
+}
+.syllabi-pdf h4 {
+	font-size: 17px;
+	margin: 0px;
+    line-height: 1.1em;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.syllabi-pdf table td h1 {
+        font-size: 27px;
+        margin: 0px;
+        line-height: 1.1em;
+        font-weight: bold;
+        margin-top: 10px;
+}
+.syllabi-pdf table td h2 {
+        font-size: 24px;
+        margin: 0px;
+        line-height: 1.1em;
+        font-weight: bold;
+        margin-top: 10px;
+}
+.syllabi-pdf table td h3 {
+        font-size: 21px;
+        margin: 0px;
+        line-height: 1.1em;
+        display: block;
+        clear: both;
+        font-weight: bold;
+        margin-top: 10px;
+}
+.syllabi-pdf table td h4 {
+        font-size: 17px;
+        margin: 0px;
+        line-height: 1.1em;
+        font-weight: bold;
+        margin-top: 10px;
+}
+
+.syllabi-pdf #iCollegeLogo ul {
+	list-style-type: disc;
+	margin-bottom: 15px;
+}
+
+.syllabi-pdf #iCollegeLogo ol {
+	margin-bottom: 18px;
+}
+
+.syllabi-pdf #iCollegeLogo ol ul {
+	list-style-type: circle;
+	margin: 10px 0;
+}
+
+.syllabi-pdf #iCollegeLogo li {
+	margin: 0 0 10px 0; 
+}
+
+.syllabi-pdf #CourseMeetingsTable {
+	margin-top: 10px;
+}
+
+
+.syllabi-pdf .grading-criteria li {
+	font-size: 11pt !important;
+}
+
+.syllabi-pdf .grading-criteria td {
+	margin: auto !important;
+	height: 33px !important;
+}
+
+.syllabi-pdf .grading-criteria td ul {
+	width: 120px;
+}
+
+.syllabi-pdf table {
+	display: table;
+}
+
+.syllabi-pdf table, .syllabi-pdf td, .syllabi-pdf th {
+	border: 1px solid #000;
+	border-collapse: collapse;
+	padding: 5px;
+	vertical-align: top;
+}
+.syllabi-pdf th {
+	text-align: left;
+}
+.syllabi-pdf table * {
+/*font-size: 10pt;*/
+}
+
+.syllabi-pdf thead { display: table-header-group }
+.syllabi-pdf tfoot { display: table-row-group }
+.syllabi-pdf tr { 
+	page-break-inside: avoid;
+	page-break-after: auto;
+} 
+.syllabi-pdf table.half {  /*remove this and the .half class breaks below*/
+}
+
+.syllabi-pdf .container-half {
+	width: 50%;
+	margin: 0 auto;
+}
+
+.syllabi-pdf table.rotate {
+	transform: translate(-110px, 100px) rotate(-90deg);
+	-webkit-transform: translate(-110px, 100px) rotate(-90deg);
+	-moz-transform: translate(-110px, 100px) rotate(-90deg);
+	-o-transform: translate(-110px, 100px) rotate(-90deg);
+	width: 220mm !important;
+	height: 170mm !important;
+	page-break-before: always;
+    display:block;
+    margin-bottom:200px;
+	/*page-break-after: always;*/
+	page-break-inside: avoid;
+}
+.syllabi-pdf table.borderless, .syllabi-pdf table.borderless td, .syllabi-pdf table.borderless th {
+	border: none !important;
+	border-collapse: collapse;
+	font-size: 10pt;
+	padding: 5px 5px 5px 0;
+}
+
+.syllabi-pdf table.fitpage thead *,
+.syllabi-pdf table.fitpage tr > td,
+.syllabi-pdf table.fitpage tr > td *,
+.syllabi-pdf table.fitpage tr > td em {
+	font-size: 8pt !important;
+}
+.syllabi-pdf table.fitpage td {
+	padding: 1px;
+	font-size: 8pt !important;
+}
+.syllabi-pdf table.fitpage ul, .syllabi-pdf table.fitpage ol {
+	padding-left: 15px;
+}
+.syllabi-pdf table a {
+	word-break: break-all;
+}
+.syllabi-pdf table.fullwidth {
+	width: 100% !important;
+}
+.syllabi-pdf table.fullwidth thead, .syllabi-pdf table.fullwidth tbody, .syllabi-pdf table.fullwidth tr {
+	width: 100% !important;
+}
+.syllabi-pdf .landscape table * {
+	font-size: 10pt !important;
+	letter-spacing: .7pt !important;
+	text-rendering: optimizeLegibility;
+} 
+.syllabi-pdf .landscape table {
+	position: relative;
+	left: -15px;
+}
+.syllabi-pdf pre {
+	font-family: inherit;
+	background-color: transparent;
+	border: none;
+	white-space: pre-wrap;
+    word-wrap: break-word;
+    padding: 0;
+    margin: 0;
+    font-size: 10pt;
+    border-radius: 0;
+    /*line-height: 7.5pt !important;*/
+}
+.syllabi-pdf table pre {
+	font-size: 10pt;
+	/*line-height: 7.5pt !important;*/
+}
+.AR {
+    font-family: Arial;
+    font-style: normal;
+}
+.GR {
+    font-family: Georgia;
+    font-style: normal;
+}
+.MN {
+    font-family: 'Montserrat';
+    font-style: normal;
+}
+.OS {
+    font-family: sans-serif;
+    font-style: normal;
+}
+.TH {
+    font-family: Tahoma;
+    font-style: normal;
+}
+.TN {
+    font-family: 'Times New Roman';
+    font-style: normal;
+}
+.VD {
+    font-family: Verdana;
+    font-style: normal;
+}

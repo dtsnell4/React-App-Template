@@ -1,0 +1,64 @@
+﻿<div id="head-nav" class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-collapse">
+            <div class="btn-group appnav" dropdown>
+                <button type="button" ng- class="btn dropdown-toggle btn-lg btn-block" dropdown-toggle>
+                    <span data-bind="label:label">{{topnav.instanceName}}</span>&nbsp;
+                    <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu dropdown-menu-long" role="menu" id="appswitcher">
+                    <li ng-repeat="menu in topnav.topmenu | orderBy:'applicationName' track by menu.id" ng-if="menu.active && menu.applicationName !='Announcements'">
+                        <a ng-if="!menu.react" ng-href="../{{::menu.applicationFolder}}/{{::menu.slug}}/">{{::menu.applicationName}} - {{::menu.name}}</a>
+                        <a ng-if="menu.react" ng-click="topnav.redirectToReact(menu)">{{::menu.applicationName}} - {{::menu.name}}</a>
+                    </li>
+                </ul>
+            </div>
+
+
+
+            <ul class="nav navbar-nav navbar-right user-nav" ng-click="topnav.checkRolesAndToken(topnav.user)">
+                <li class="dropdown profile_menu" dropdown>
+                    <a href="#/" class="dropdown-toggle" dropdown-toggle>
+                        <img class="user-icon" nsu-profile-picture ng-show="topnav.user.unique_name && topnav.originalToken == null" />
+                        <i class="fa fa-user-secret fa-2x" ng-show="topnav.originalToken != null"></i>
+                        <span>{{topnav.user.unique_name}}</span>
+                        <b class="caret"></b>
+                    </a>
+                    <ul class="dropdown-menu" role="menu">
+                        <!--<li><a ng-click="topnav.reload()">My Account</a></li>
+                        <li><a href="#">Profile</a></li>
+                        <li><a href="#">Messages</a></li>
+                        <li class="divider"></li>-->
+                        <li ng-if="topnav.canImpersonate">
+                            <a ng-click="topnav.Impersonate()">{{'IMPERSONATE' | translate}}</a>
+                        </li>
+                        <li ng-if="topnav.backToUser">
+                            <a ng-click="topnav.goBackToUser()">{{'END_IMPERSONATE ' | translate}}</a>
+                        </li>
+                        <li>
+                            <a>{{'TIMES_IN' | translate}} {{topnav.timezone}}</a>
+                        </li>
+
+                        <!--
+                        <li ng-if="topnav.user.IsExternal && topnav.user.IsExternal == 'true'"><a ng-click="topnav.goToProfile()">{{'MY_PROFILE' | translate}}</a></li>
+                        <li ng-if="topnav.user.IsExternal && topnav.user.IsExternal == 'true'"><a ng-click="topnav.changePassword()">{{'CHANGE_PASSWORD' | translate}}</a></li>
+                        -->
+
+                        <li>
+                            <a ng-click="topnav.logout()">{{'SIGN_OUT' | translate}}</a>
+                        </li>
+
+                    </ul>
+                </li>
+            </ul>
+
+        </div>
+        <!--/.nav-collapse animate-collapse -->
+    </div>
+</div>
+<style>
+    .dropdown-menu li ul li {
+        list-style: none;
+        text-decoration: none;
+    }
+</style>

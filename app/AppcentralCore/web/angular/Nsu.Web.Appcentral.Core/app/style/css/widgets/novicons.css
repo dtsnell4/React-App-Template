@@ -1,0 +1,255 @@
+﻿@font-face {
+  font-family: 'novicons';
+  src:  url('../fonts/novicons.eot?wevhsl');
+  src:  url('../fonts/novicons.eot?wevhsl#iefix') format('embedded-opentype'),
+        url('../fonts/novicons.ttf?wevhsl') format('truetype'),
+        url('../fonts/novicons.woff?wevhsl') format('woff'),
+        url('../fonts/novicons.svg?wevhsl#Novicons') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.nsu {
+	font-family: 'novicons'!important;
+}
+
+[class^="nsu-"], [class*=" nsu-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'novicons' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.nsu-add:before {
+  content: "\e92c";
+}
+.nsu-download:before {
+  content: "\e92a";
+}
+.nsu-download-line:before {
+  content: "\e92b";
+}
+.nsu-upload:before {
+  content: "\e91c";
+}
+.nsu-upload-line:before {
+  content: "\e926";
+}
+.nsu-cv:before {
+  content: "\e927";
+}
+.nsu-remove:before {
+  content: "\e924";
+}
+.nsu-faq:before {
+  content: "\f128";
+}
+.nsu-information:before {
+  content: "\e91d";
+}
+.nsu-url-solid:before {
+  content: "\e929";
+}
+.nsu-publications:before {
+  content: "\e928";
+}
+.nsu-reorder-lists:before {
+  content: "\e925";
+}
+.nsu-templates:before {
+  content: "\e922";
+}
+.nsu-edit:before {
+  content: "\e923";
+}
+.nsu-my-courses:before {
+  content: "\e920";
+}
+.nsu-all-courses:before {
+  content: "\e921";
+}
+.nsu-send:before {
+  content: "\f1d8";
+}
+.nsu-vendor:before {
+  content: "\e91a";
+}
+.nsu-parameters:before {
+  content: "\f085";
+}
+.nsu-master-template:before {
+  content: "\e91b";
+}
+.nsu-college:before {
+  content: "\f19c";
+}
+.nsu-form:before {
+  content: "\e91e";
+}
+.nsu-seat:before {
+  content: "\e918";
+}
+.nsu-specialty:before {
+  content: "\e919";
+}
+.nsu-loading:before {
+  content: "\e915";
+}
+.nsu-settings:before {
+  content: "\e916";
+}
+.nsu-leads:before {
+  content: "\e913";
+}
+.nsu-url:before {
+  content: "\e914";
+}
+.nsu-archive-02:before {
+  content: "\e902";
+}
+.nsu-archive-01:before {
+  content: "\f187";
+}
+.nsu-delete2:before {
+  content: "\e903";
+}
+.nsu-alert-line:before {
+  content: "\e904";
+}
+.nsu-syllabi:before {
+  content: "\e905";
+}
+.nsu-campaign-solid:before {
+  content: "\e906";
+}
+.nsu-campaign:before {
+  content: "\e907";
+}
+.nsu-read-more:before {
+  content: "\e908";
+}
+.nsu-spring:before {
+  content: "\e909";
+}
+.nsu-dashboard:before {
+  content: "\e90a";
+}
+.nsu-courses:before {
+  content: "\f022";
+}
+.nsu-reports:before {
+  content: "\f201";
+}
+.nsu-alert:before {
+  content: "\e90b";
+}
+.nsu-logo-01:before {
+  content: "\e90c";
+}
+.nsu-appcentral:before {
+  content: "\e90d";
+}
+.nsu-razor:before {
+  content: "\e90e";
+}
+.nsu-progress:before {
+  content: "\e90f";
+}
+.nsu-mapping:before {
+  content: "\e900";
+}
+.nsu-change-grade:before {
+  content: "\e901";
+}
+.nsu-search:before {
+  content: "\f002";
+}
+.nsu-verify:before {
+  content: "\f00c";
+}
+.nsu-close:before {
+  content: "\f00d";
+}
+.nsu-administration:before {
+  content: "\f013";
+}
+.nsu-home:before {
+  content: "\f015";
+}
+.nsu-books:before {
+  content: "\f02d";
+}
+.nsu-previous:before {
+  content: "\f053";
+}
+.nsu-next:before {
+  content: "\f054";
+}
+.nsu-announcements:before {
+  content: "\f0a1";
+}
+.nsu-population:before {
+  content: "\f0c0";
+}
+.nsu-class:before {
+  content: "\f19d";
+}
+.nsu-winter:before {
+  content: "\e910";
+}
+.nsu-external-link:before {
+  content: "\e911";
+}
+.nsu-elections:before {
+  content: "\e912";
+}
+.nsu-help:before {
+  content: "\e941";
+}
+.nsu-notifications:before {
+  content: "\e951";
+}
+.nsu-course-schedule:before {
+  content: "\e953";
+}
+.nsu-faculty:before {
+  content: "\e971";
+}
+.nsu-fall:before {
+  content: "\e9a4";
+}
+.nsu-delete:before {
+  content: "\e9ac";
+}
+.nsu-menu:before {
+  content: "\e9bd";
+}
+.nsu-review-request:before {
+  content: "\e9ce";
+}
+.nsu-summer:before {
+  content: "\e9d4";
+}
+.nsu-sign-in:before {
+  content: "\ea13";
+}
+.nsu-sign-out:before {
+  content: "\ea14";
+}
+.nsu-filter:before {
+  content: "\ea5b";
+}
+.nsu-letter:before {
+  content: "\e91f";
+}
+.nsu-code:before {
+  content: "\e917";
+}

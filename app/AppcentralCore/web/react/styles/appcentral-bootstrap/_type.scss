@@ -1,0 +1,24 @@
+// Variable Overrides:
+
+// .h1, .h2, .h3, .h4, .h5, h1, h2, h3, h4, h5 {
+//     margin-top: $headings-margin-top;
+// }
+
+// p {
+// 	line-height: $paragraph-lineheight;
+// 	margin-bottom: $paragraph-margin-bottom;
+// }
+
+.cl-mcont {
+	font-size: $font-size-base;
+	color: $body-color;
+}
+
+
+
+// Import vendor file
+@import "../twitter-boostrap/type";
+
+
+
+// Value Overrides

@@ -1,0 +1,79 @@
+﻿<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal" aria-label="Close" ng-click="impersonate.cancel()"><span aria-hidden="true">&times;</span></button>
+<h3 class="modal-title modal-header-primary break-word">{{impersonate.title}}</h3>
+</div>
+<div class="modal-body" ng-if="!impersonate.remove">
+<div class="form-horizontal">
+<form novalidate name="impersonateform" class="search-form">
+<fieldset>
+<p> To add a user you can start by searching by Last Name, NSU ID or Email. Then check the user you would like to add and click "Add Users" </p>
+<div class="row">
+<div class="col-md-3 col-sm-12">
+<select class="form-control"
+ng-init="impersonate.setbannersearch = impersonate.selectOptions[0]"
+ng-model="impersonate.setbannersearch"
+ng-options="option.label for option in impersonate.selectOptions">
+Search in
+</select>
+</div>
+<div class="col-md-9 col-sm-12">
+<form class="search-form">
+<div class="input-group">
+<input type="text" class="form-control" autofocus name="searchvalue" ng-model="searchvalue" placeholder="Search..." ng-change="impersonate.search(searchvalue, false)" ng-model-options="{debounce: 750}">
+<span class="input-group-addon btn-primary">
+<span class="nsu-search" type="submit" ng-click="impersonate.search(searchvalue, false)"></span>
+</span>
+</div>
+</form>
+</div>	
+</div>
+<div id="results">
+<table ng-if="impersonate.users && impersonate.users.length > 0 && impersonate.usersload" class="table">
+<tr>
+<th>Select</th>
+<th>Full Name</th>
+<th>Email</th>
+<th>NSU</th>
+</tr>
+<tr ng-repeat="user in impersonate.pagedusers ">
+<td class="text-center"><input type="radio" required ng-model="impersonate.userId" ng-click="impersonate.ImpersonateUser(user)" name="impersonating" ng-value="user.userId" /></td>
+<td> {{user.lastName + ", " +user.firstName}} </td>
+<td> {{user.email}} </td>
+<td> {{user.nsu}} </td>
+</tr>
+</table>
+<div ng-if="impersonate.users && impersonate.users.length == 0 && impersonate.usersload " class="text-center"> <span>No records found.</span> </div>
+<div class="row" ng-if="impersonate.pagedusers.length > 0">
+<div class="col-sm-12">
+<div class="pull-left">
+<div class="pagination"> <span>{{impersonate.firstItem}} to {{impersonate.lastItem}} of {{impersonate.totalItmes}}</span> </div>
+</div>
+<div class="pull-right">
+<div pagination total-items="impersonate.totalItmes" ng-model="impersonate.page" ng-change="impersonate.refresh()" ng-if="impersonate.pagedusers.length > 0" num-pages="impersonate.pages"></div>
+</div>
+<div class="clearfix"></div>
+</div>
+</div>
+</div>
+</fieldset>
+</form>
+</div>
+<div class="alert alert-danger alert-white rounded" ng-if="impersonate.error != 'cancel' && impersonate.error != undefined">
+<div class="icon"> <i class="fa fa-times-circle"></i> </div>
+<strong>Error!</strong> {{impersonate.error}} </div>
+</div>
+
+
+
+
+
+<div class="modal-footer">
+  <div class="row">
+    <div class="col-md-6">
+      <button class="btn btn-block btn-default" ng-click="impersonate.cancel()">Cancel</button>
+    </div>
+    <div class="col-md-6">
+      <button class="btn btn-block btn-primary" ng-disabled="impersonateform.$invalid || impersonate.usersload == null" ng-click="impersonate.ok()">{{impersonate.buttonText}}</button>
+    </div>
+  </div>
+</div>

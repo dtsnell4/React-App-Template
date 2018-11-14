@@ -1,0 +1,16 @@
+﻿.pagination span {
+    padding-top: 10px;
+}
+
+.highlight {
+      border-radius: 3px;
+      border-width: 2px;
+      border-color: #4099d5;
+}
+
+.odd {
+  background-color: white;
+}
+.even {
+  background-color: whitesmoke;
+}

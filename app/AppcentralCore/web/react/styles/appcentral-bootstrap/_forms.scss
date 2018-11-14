@@ -1,0 +1,121 @@
+
+// Import vendor file
+@import "../twitter-boostrap/forms";
+
+// Custom Overrides:
+
+// Form Control
+.form-control {
+    width: 100%;
+    padding: 5px 12px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
+select.form-control {
+  &:not([size]):not([multiple]) {
+    height: initial;
+    padding: .3311rem .5rem;
+  }
+}
+
+
+.fr-wrapper {
+    height: 320px;
+    overflow: auto;
+}
+
+.invalid-feedback {
+    display: block;
+}
+
+// input group
+.input-group {
+    .e-btn, button {
+        border-radius: 0px;
+    }
+}
+
+// Syncfusion Date Picker
+input.e-input, 
+.e-input-group input.e-input, 
+.e-input-group input, 
+.e-input-group.e-control-wrapper input.e-input, 
+.e-input-group.e-control-wrapper input, 
+.e-float-input input, 
+.e-float-input.e-input-group input, 
+.e-float-input.e-control-wrapper input, 
+.e-float-input.e-control-wrapper.e-input-group input, 
+.e-input-group, 
+.e-input-group.e-control-wrapper, 
+.e-float-input, 
+.e-float-input.e-control-wrapper {
+    border-radius: $border-radius;
+    font-size: 1rem;
+}
+input.e-input, 
+.e-input-group input, 
+.e-input-group.e-control-wrapper input, 
+.e-float-input.e-control-wrapper input, 
+.e-input-group input.e-input, 
+.e-input-group.e-control-wrapper input.e-input, 
+.e-float-input input, 
+.e-float-input.e-control-wrapper input {
+    height: 35px;
+}
+
+// Syncfusion Form Tab Wizard
+.form-tab-wizard {
+    .nav-tabs {
+        .nav-link {
+            font-size: $font-size-base;
+            font-weight: 500;
+        }
+        .nav-link:not(.active) {
+            cursor: pointer;
+            color: $primary;
+        }
+        .nav-link.active, .nav-item.show .nav-link {
+            color: $white;
+            background-color: $primary;
+            border-color: $primary;
+        }
+    }
+    .nav.nav-tabs {
+        margin-bottom: 1.5rem;
+    }
+}
+
+.map-container {
+    height: 450px;
+    position: relative;
+}
+.map-element {
+    height: 400px;
+    top: 50px;
+}
+.display-coordinates {
+    width: 100%;
+    padding: 5px 12px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #495057;
+    display: block;
+    background-clip: padding-box;
+    position: absolute;
+    top: 0;
+    .fa-map-marker {
+        margin-right: 1rem;
+        font-size: 1.2rem;
+        color: $gray-500;
+    }
+}

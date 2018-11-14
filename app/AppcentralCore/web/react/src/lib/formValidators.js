@@ -1,0 +1,15 @@
+export const required = (value) => (value && value !== '') ? undefined : 'This field is required!';
+export const maxLength = (max) => (value) => (value && value.length > max) ? `Must be ${max} characters or less` : undefined;
+export const minLength = (min) => (value) => (value && value.length < min) ? `Must be atleast ${min} characters or more` : undefined;
+export const maxLength20 = maxLength(20);
+export const maxLength40 = maxLength(40);
+export const maxLength80 = maxLength(80);
+export const maxLength250 = maxLength(250);
+export const minLength5 = minLength(5);
+export const email = (value) => value && !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(value) ? 'Invalid email address' : undefined;
+export const phone = (value) => value && !/^[+]?[(]?[0-9]{3}[)]?[-\s.]?[0-9]{3}[-\s.]?[0-9]{4}$/i.test(value) ? 'Invalid phone address' : undefined;
+export const greaterThan = (min) => (value, previousValue) => value > min ? value : previousValue;
+export const lessThan = (otherField) => (value, previousValue, allValues) => value < allValues[otherField] ? value : previousValue;
+export const minValue = (min) => (value) => value && value < min ? `Must be at least ${min}` : undefined;
+export const positive = minValue(0);
+export const dateMinToday = (value) => (value && new Date(value) >= new Date(new Date().setDate(new Date().getDate() - 1))) ? undefined : 'Date must be a future date';

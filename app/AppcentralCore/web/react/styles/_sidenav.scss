@@ -1,0 +1,186 @@
+
+.cl-sidebar .cl-toggle{display:none;padding:7px 8px;text-align:center;cursor:pointer;position:absolute;right:15px;top:14px;background:rgba(0,0,0,.15);border-radius:3px;}
+.cl-sidebar .cl-toggle i{color:#fff;font-size:21px;}
+.cl-vnavigation ul {
+	padding:0;
+	margin: 0;
+	list-style: none;
+	.parent{
+		background-color: #272930;
+		&.open{
+			background-color: #272930;
+		}
+	}
+}
+.cl-vnavigation .parent > a:before{display:inline-block;content:"\f054";font-family:FontAwesome;float:right;transition:transform 250ms ease;font-size:8px;margin-top:5px;}
+.cl-vnavigation .parent.open > a:before {
+	transform: rotate(90deg);
+}
+.cl-vnavigation li a{
+	border-top:1px solid rgba(255,255,255,.04);
+	display:block;padding:14px 25px;
+	color:#fff !important;
+	font-size:14px;
+	font-weight:400;
+	white-space:nowrap;
+	transition:color 250ms ease;
+}
+.parent .sub-menu{padding:10px 0;}
+.sub-menu li a{
+	border-left: 2px solid transparent;
+}
+.sub-menu li a:hover{background-color:rgba(0,0,0,.1);}
+.cl-sidebar .collapse-button button{margin:0!important;background:0 0;box-shadow:none;border:1px solid rgba(255,255,255,.07);border-radius:2px;}
+.sb-collapsed .cl-sidebar .collapse-button{width:70px;text-align:center;}
+.cl-vnavigation li a i{text-align:center;width:20px;font-size:14px;margin-right:7px;}
+.cl-vnavigation li a span{display:inline-block;}
+.cl-vnavigation li ul{margin:0;padding:4px 0 0;}
+
+.cl-vnavigation a{
+	cursor:pointer;
+}
+.cl-vnavigation a.active {
+    background: rgba(0,0,0,.5);
+    border-left: 2px solid #4aa3df;
+}
+
+.cl-sidebar{display:table-cell;vertical-align:top;}
+.cl-vnavigation .parent ul li a{font-size:13px;background-image:none;padding:7px 18px 7px 40px;}
+.cl-vnavigation .parent ul li a:first-child{border-top:0;}
+.cl-sidebar{position:relative;}
+.cl-sidebar{padding-bottom:200px;}
+.navtitle{font-size:1.4em;color:#fff;line-height:34px;}
+.cl-sidebar .collapse-button{background:#0f2a56;position:relative;width:280px;border-top:1px solid #0f2a56;}
+.cl-sidebar .collapse-button button:hover{background:#041a3d;}
+.cl-vnavigation li ul{background-color:#041a3d;display:block;}
+.cl-vnavigation .parent ul li a:hover{background-color:rgba(0,0,0,.2);}
+.sidenav-dark .cl-vnavigation .parent ul li a:hover{background-color:rgba(0,0,0,.7);}
+.sidenav-dark .cl-vnavigation li ul{background-color:#131313;}
+.sidenav-dark {
+	background:#272930;
+}
+.cl-vnavigation li a:hover {
+	// background-color:#0f2a56;
+	color:#fff !important;
+}
+.sidenav-dark .cl-vnavigation li a:hover{background-color:#22242b;}
+.sidebar-logo{background:url(https://appcentral.nova.edu/assets/0.0.2/images/logo.png) center 19px no-repeat #0287cc;}
+.sidebar-logo{display:block;height:64px;padding:15px 20px;}
+.sb-collapsed .cl-vnavigation li{position:relative;}
+.cl-vnavigation li ul li a{background-color:#041a3d;}
+.cl-sidebar .branding{display:none;}
+.cl-sidebar .cl-toggle {
+	z-index:1005;
+    border: 0;
+}
+.sidenav-dark .cl-sidebar .collapse-button button{margin-right:7px!important;}
+.sb-collapsed .navtitle{display:inline-block;float:left;}
+.sidenav-dark.sb-collapsed .cl-sidebar .collapse-button{width:280px;text-align:right;}
+.cl-sidebar .collapse-button,.cl-vnavigation li a,.cl-vnavigation li ul li a{background-color:transparent;}
+.cl-sidebar .collapse-button button:hover{background-color:#041a3d;}
+.sidenav-dark .cl-sidebar .collapse-button button:hover{background-color:#0c0c0c;}
+#sidebar-collapse .fa-thumb-tack{transform:rotate(0);overflow:hidden;color:#fff;margin-right:0;}
+#sidebar-collapse .fa-bars{color:#fff;}
+.sidenav-dark.sb-collapsed #sidebar-collapse .fa-thumb-tack {
+	display:none;
+}
+.sidenav-dark.sb-collapsed #sidebar-collapse .fa-bars, .sidenav-dark.sb-collapsed .cl-sidebar:hover #sidebar-collapse .fa-thumb-tack {
+	display:inline-block;
+}
+.sidenav-dark.sb-collapsed .cl-sidebar:hover #sidebar-collapse .fa-bars, .sidenav-dark:not(.sb-collapsed) #sidebar-collapse .fa-bars {
+    display: none;
+}
+.sidenav-dark.sb-collapsed .cl-sidebar:hover #sidebar-collapse .fa-bars{display:none;}
+#sidebar-collapse .fa-thumb-tack:before{top:4px;position:relative;}
+.sb-collapsed #sidebar-collapse .fa-thumb-tack{transform:rotate(45deg) translate(2px,1px);}
+.sb-collapsed #sidebar-collapse .fa-thumb-tack:before{top:0;}
+
+@media (max-width:991px){
+	.cl-sidebar,.sb-collapsed .cl-sidebar{background:#272930;width:100%;position:relative;z-index:1020;display:block;padding-bottom:0;}
+	#cl-wrapper .menu-space{min-height:0!important;}
+	.sb-collapsed .cl-vnavigation li a span{opacity:1;}
+	.sb-collapsed .cl-vnavigation li a i{font-size:14px;margin-right:7px;text-align:center;width:20px;}
+	.cl-sidebar .cl-toggle{display:block;}
+	.cl-sidebar .cl-vnavigation {
+		display: block !important;
+		height: 0;
+		transition: height .3s;
+		overflow: hidden;
+	}
+	.cl-sidebar .cl-vnavigation.sidenav-dropped {
+		height: auto;
+	}
+	.cl-sidebar .collapse-button {
+		display: none;
+	}
+}
+@media (max-width:767px){
+	.cl-sidebar .branding,.cl-sidebar .collapse-button{display:none;}
+	.cl-sidebar .cl-toggle{z-index:1005;}
+}
+@media print{
+	span{font-size:9px!important;}
+	.cl-sidebar,a{display:none;}
+}
+@media (min-width:992px){
+	.cl-sidebar .cl-vnavigation{display:block!important;}
+	.sidenav-dark.sb-collapsed .sidebar-logo{background:url(http://fldvd-webnet01.ad.nova.edu/appcentral/assets/0.0.2/images/logo.png) 230px -44px no-repeat #0287cc;padding:4px 0 5px;position:relative;}
+	.sb-collapsed .cl-vnavigation li a i{margin:0;font-size:17px;}
+	.sb-collapsed .cl-vnavigation li a span{opacity:0;width:0;height:0;}
+	.sb-collapsed .cl-vnavigation .parent a:before{display:none;}
+	.sb-collapsed .cl-sidebar:hover .cl-vnavigation .parent a:before{display:inline-block;}
+	.sb-collapsed .cl-sidebar{width:70px;margin-left:0;position:relative;height:100%;}
+	.sidenav-dark.sb-collapsed .cl-sidebar{width:280px;margin-left:-210px;position:absolute;height:100%;transition:margin-left .2s;z-index:1004;}
+	.sidenav-dark.sb-collapsed .cl-sidebar:hover{margin-left:0;width:280px;}
+	.sidenav-dark.sb-collapsed .cl-sidebar:hover .cl-vnavigation li a span{opacity:1;width:initial;height:initial;}
+	.sidenav-dark .cl-sidebar:hover .sidebar-logo{background:url(http://fldvd-webnet01.ad.nova.edu/appcentral/assets/0.0.2/images/logo.png) center 19px no-repeat #0287cc;display:block;height:64px;padding:15px 20px;width:280px;right:0;position:relative;}
+	.sidenav-dark.sb-collapsed .cl-vnavigation li a i{left:209px;position:relative;}
+	.sidenav-dark.sb-collapsed .cl-sidebar:hover .cl-vnavigation li a i{left:0;position:relative;}
+	.sidenav-dark .cl-sidebar:hover .cl-vnavigation li a i{text-align:center;width:20px;font-size:14px;margin-right:7px;}
+	.sb-collapsed .cl-vnavigation li.parent ul {
+	    display: none!important;
+	}
+	.sb-collapsed .cl-sidebar:hover .cl-vnavigation li.parent ul {
+	    display: block!important;
+	}
+}
+
+.sidenav-dark {
+    width: 100%;
+    // position: relative;
+    z-index: 1020;
+    display: block;
+    padding-bottom: 0;
+}
+
+#pcont {
+	margin-left: 0;
+	display: block;
+}
+#pcont.container-fluid, .container-fluid {
+    padding: 0;
+}
+#pcont, body {
+    position: relative;
+}
+@media (min-width: 992px) {
+	.sidenav-dark.sb-collapsed + #pcont {
+	    padding-left: 70px;
+	}
+	#pcont, .sidenav-dark {
+	    display: table-cell;
+	    vertical-align: top;
+	}
+	.sidenav-dark {
+	    width: auto;
+	}
+	#pcont {
+	    margin-left: 216px;
+	}
+}
+.sidenav-header {
+	font-size: 14px;
+	font-weight: 500;
+	color: $white;
+    padding: 7px 15px 7px 37px;
+}

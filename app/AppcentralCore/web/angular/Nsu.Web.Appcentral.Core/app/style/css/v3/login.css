@@ -1,0 +1,117 @@
+﻿body.texture {
+	background: url('../images/login.jpg') no-repeat center top fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+.login-container .cl-mcont {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+}
+.login-container .block-flat .header {
+    background: #0188cc none repeat scroll 0 0;
+    border-bottom: 1px solid #0188cc;
+}
+.login-container .block-flat .header {
+    padding: 9px 20px;
+}
+#login-logo {
+    background: #0287cc url("../images/logo.png") no-repeat scroll center 5px;
+    text-indent: -99999px;
+}
+.login-container .block-flat .header h3, .modal-body, .noScroll, .vertical-divider {
+    overflow: hidden;
+}
+.login-container .block-flat .header h3 {
+    color: #fff;
+    line-height: 35px;
+    margin: 0;
+    min-height: 40px;
+    position: relative;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.3);
+}
+.block-flat .header h3, .widget-block .header h3 {
+    margin-top: 3px;
+}
+.block .header h3, .block-flat .header h3, .widget-block .header h3 {
+    font-family: Raleway,Helvetica,sans-serif;
+    font-weight: 200;
+}
+.covervid-wrapper {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+.cl-mcont .login-row {
+	margin-top: 13%;
+}
+.cl-mcont .register-row {
+	margin-top: 3%;
+}
+.register-row .header {
+	margin-bottom: 0px;
+}
+@media (min-width: 426px) {
+.login-bf {
+	max-width: 400px;
+	margin: 0 auto;
+}
+
+}
+@media (min-width: 426px) and (max-width: 1280px) {
+.register-bf {
+	max-width: 95%;
+	margin: 0 auto;
+}
+}
+@media (min-width: 1281px){
+.register-bf {
+	max-width: 70%;
+	margin: 0 auto;
+}
+}
+
+@media (max-width: 425px) {
+.login-container .cl-mcont {
+	padding: 0px;
+	height: 100%;
+}
+.cl-mcont .login-row {
+	margin-top: 0px;
+}
+.cl-mcont .register-row {
+	margin-top: 0px;
+}
+
+.login-container .block-flat, .login-container .login-bf {
+	width: 100% !important;
+	box-shadow: none;
+	border: none;
+	border-radius: 0px;
+}
+body.texture {
+	background-color: #fff;
+	background-image: none;
+	}	
+.covervid-wrapper {
+	background-color: #fff;
+	background-image: none;
+	display: none;
+	}	
+.login-container .out-links a {
+    color: #0188cc;
+	text-shadow: none;
+	
+}
+}
+
+.login-container .block-flat .content {
+    padding: 10px 30px 30px;
+}
+.login-container .block-flat {
+	border-radius: 0px;
+	-webkit-border-radius: 0px;
+
+}

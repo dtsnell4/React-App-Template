@@ -1,0 +1,27 @@
+﻿<div class="row white-background-color height100">
+    <div class="col-xs-12 col-md-12 col-sm-12">
+        <form class="col-md-2 col-sm-12 col-xs-12 height100">
+            <div>
+                <select class="btn btn-sm dropdown-toggle col-md-12 col-sm-12 col-xs-12"
+                        ng-model="vm.term"
+                        required="required"
+                        tabindex="-1">
+
+                    <option ng-repeat="term in vm.terms" value="{{term.code}}"
+                            ng-selected="vm.term.desc === term.desc">
+                        {{term.desc}}
+                    </option>
+                </select>
+            </div>
+            <div>
+                <input type="text" class="form-control" placeholder="CRN">
+            </div>
+        </form>
+        <div class="col-xs-10 col-md-10 col-sm-12 border-left height100">
+            <h2>Search Results</h2>
+            <hr />
+            <!--<photo-grid ng-model="vm.students"></photo-grid>-->
+
+        </div>
+    </div>
+</div>

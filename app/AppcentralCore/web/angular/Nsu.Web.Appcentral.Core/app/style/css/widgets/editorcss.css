@@ -1,0 +1,10 @@
+﻿.note-editor, .note-editor p {
+
+    font-size:14px !important;
+    word-break: break-word;
+    -ms-word-break: break-word;
+    /*line-height: 16px!important;*/
+     line-height: .8 !important;
+}
+
+

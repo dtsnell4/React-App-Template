@@ -1,0 +1,88 @@
+﻿<div>
+    <div class="modal-header">
+        <h3 class="modal-title modal-header-primary">Add Users</h3>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close" ng-click="adduser.cancel()"><span aria-hidden="true">&times;</span></button>
+    </div>
+    <div class="modal-body">
+        <form novalidate name="adduserform" class="">
+          
+                    <p>To add a user you can start by searching by Last Name, NSU ID or Email.
+						Then check the user you would like to add and click "Add Users"</p>
+
+            <div class="row">
+                <div class="form-group col-md-3 col-sm-4">
+                    <select class="form-control"
+                            ng-init="adduser.setbannersearch = adduser.selectOptions[0]"
+                            ng-model="adduser.setbannersearch"
+                            ng-options="option.label for option in adduser.selectOptions">
+                        Search in
+                    </select>
+                </div>
+
+                <div class="form-group col-md-9 col-sm-6">
+                    <div class="input-group pull-right">
+                        <input type="text" class="form-control" name="searchvalue" ng-model="searchvalue" placeholder="Search...">
+                        <span class="input-group-btn">
+                            <button class="btn btn-default" type="submit" ng-click="adduser.search(searchvalue)">
+                                <i class=" fa fa-search"></i>
+                            </button>
+                        </span>
+                    </div>
+                </div>
+
+            </div>
+
+            <div id="results">
+                <table ng-if="adduser.users && adduser.users.length > 0 && adduser.usersload" class="table">
+                    <tr>
+                        <th>Select</th>
+                        <th>Full Name</th>
+                        <th>Email</th>
+                        <th>NSU</th>
+                    </tr>
+
+                    <tr ng-repeat="user in adduser.pagedusers ">
+                        <td>
+                            <input icheck type="checkbox" class="btn-primary"
+                                   ng-model="user.checked"
+                                   value="{{user.userId}}"
+                                   ng-change="adduser.toggleUser(user)"/>
+                        </td>
+                        <td>
+                            {{user.lastName + ", " +user.firstName}}
+                        </td>
+
+                        <td>
+                            {{user.email}}
+                        </td>
+                        <td>
+                            {{user.nsu}}
+                        </td>
+                    </tr>
+                </table>
+                <div ng-if="adduser.users && adduser.users.length == 0 && adduser.usersload " style="text-align:center">
+                    <span>No records found.</span>
+                </div>
+                <div class="row" ng-if="adduser.pagedusers.length > 0">
+                    <div class="col-sm-12">
+                        <div class="pull-left">
+                            <div class="pagination">
+                                <span>{{adduser.firstItem}} to {{adduser.lastItem}} of {{adduser.totalItmes}}</span>
+                            </div>
+                        </div>
+
+                        <div class="pull-right">
+                            <div pagination total-items="adduser.totalItmes" ng-model="adduser.page" ng-change="adduser.refresh()" ng-if="adduser.pagedusers.length > 0" num-pages="adduser.pages"></div>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+
+                <button class="btn btn-default" ng-click="adduser.cancel()">Cancel</button>
+                <button class="btn btn-primary" ng-disabled="adduserform.$invalid" ng-click="adduser.ok()">Add Users</button>
+            </div>
+        </form>
+    </div>
+</div>

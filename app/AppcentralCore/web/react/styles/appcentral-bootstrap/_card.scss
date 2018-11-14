@@ -1,0 +1,114 @@
+// Import vendor file
+@import "../twitter-boostrap/card";
+
+// Custom Overrides:
+.card-deck{
+	.cardCol{
+		@media screen and (max-width:576px){
+			padding:0px;			
+		}
+	}
+}	
+.card {
+    box-shadow: 0 1px 1px rgba(0,0,0,.05);
+    border: 1px solid #ddd;
+	height: 100%;
+	.card-footer {
+		padding: 10px 15px;
+	    background-color: transparent;
+	    border-top: none;
+	    .btn {
+	    	margin-bottom: 0;
+	    }
+	    .buttonscontainer {
+	    	margin-top: 0;
+	    	display: table;
+		    .left-buttons {
+		    	display: table-cell;
+		    	.btn {
+			    	display: inline-block;
+			    	width: auto;
+			    	margin-bottom: 0;
+		    	}
+		    	a {
+		    		margin-bottom: 0;
+		    	}
+		    }
+		    .right-buttons {
+		    	display: table-cell;
+		    	.btn, a {
+		    		margin-bottom: 0;
+		    	}
+		    }
+	    }
+	}
+	.card-body {
+	    padding: 15px;
+	}
+	.card-title {
+		font-size: $h5-font-size;
+		font-weight: 500;
+	}
+	.cardimg {
+	   	background-size: 100% 100%;
+	   	position: relative;
+	   	width: 100%;
+	   	&.aspect16-9 {
+		   	padding-top: 56%; /* 16:9 Aspect Ratio */
+		}
+		&.aspect46 {
+			padding-top: 46.47%;
+		}
+		&.profile {
+			text-align: center;
+			background-color: #2c44a0;
+			img {
+				height: 200px;
+			}
+		}
+	}
+}
+
+.manage-calendars {
+	.card-footer {
+	    background-color: $bg-gray;
+	    border-top: 1px solid #ddd;
+	    .btn {
+	    	background-color: $white;
+	    	&:hover {
+	    		background-color: $secondary;
+	    	}
+	    }
+	}
+}
+
+
+////////////
+// Panels //
+////////////
+
+.panel {
+	border: 1px solid $border-color;
+	.panel-header {
+		padding: 8px 20px;
+		font-weight: $font-weight-bold;
+		span {
+			margin-right: 60px;
+		}
+		.capacity {
+			display: inline-block;
+			padding: 0 5px;
+			float: right;
+			background-color: $info;
+			border-radius: 4px;
+			color: $white;
+			font-size: 14px;
+		}
+	}
+	.panel-body {
+		padding: 20px;
+		.media {
+			border: none;
+		}
+	}
+}

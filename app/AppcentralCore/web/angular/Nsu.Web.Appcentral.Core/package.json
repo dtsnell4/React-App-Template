@@ -1,0 +1,50 @@
+{
+  "name": "appcentral.core",
+  "version": "0.0.2",
+  "description": "AppCentral core directives and  services",
+  "main": "gulpfile.js",
+  "devDependencies": {
+    "browser-sync": "^2.8.0",
+    "glob": "^5.0.14",
+    "gulp-jscs": "^1.6.0",
+    "gulp-jshint": "^1.11.2",
+    "jshint-stylish": "^2.0.1",
+    "merge": "^1.2.0",
+    "plato": "^1.5.0",
+    "require-dir": "^0.3.2"
+  },
+  "dependencies": {
+    "angular-bootstrap-datetimepicker": "^0.4.0",
+    "angular-ui-sortable": "^0.14.2",
+    "bower": "^1.8.4",
+    "del": "^1.2.0",
+    "eslint": "^1.9.0",
+    "eslint-config-angular": "^0.4.0",
+    "eslint-plugin-angular": "^0.13.0",
+    "gulp": "^3.9.1",
+    "gulp-angular-templatecache": "^1.7.0",
+    "gulp-autoprefixer": "^2.3.1",
+    "gulp-bytediff": "^0.2.1",
+    "gulp-cache": "^0.2.10",
+    "gulp-concat": "^2.6.0",
+    "gulp-eslint": "^1.1.0",
+    "gulp-filter": "^2.0.2",
+    "gulp-help": "^1.6.0",
+    "gulp-inject": "^1.5.0",
+    "gulp-load-plugins": "^0.10.0",
+    "gulp-minify-css": "^1.2.0",
+    "gulp-minify-html": "^1.0.4",
+    "gulp-ng-annotate": "^1.0.0",
+    "gulp-replace": "^0.6.1",
+    "gulp-sourcemaps": "^1.5.2",
+    "gulp-uglify": "^1.2.0",
+    "gulp-util": "^3.0.6",
+    "jstimezonedetect": "^1.0.6",
+    "main-bower-files": "^2.9.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

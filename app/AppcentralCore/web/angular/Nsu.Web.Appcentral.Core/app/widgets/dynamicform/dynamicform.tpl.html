@@ -1,0 +1,89 @@
+﻿<div class="row no-margin-top">
+    <div class="col-md-12 form-event">
+        <div ng-repeat="field in fields | orderBy:'order'">
+
+            <ng-switch on="field.type">
+                <h3 ng-switch-when="header" class="col-md-12 animated fadeIn">
+                    {{field.name}}
+                </h3>
+
+                <div ng-switch-default class="input {{field.type}}"
+                     ng-class="field.required && 'required'">
+
+                    <div class="form-group {{field.width}}" ng-class="{'newrow' : field.newrow}">
+                        <label><span ng-if="!field.hidelabel">{{field.name}}</span>&nbsp;</label>
+
+                        <ng-switch on="field.type">
+
+                            <div ng-switch-default>
+                                <input class="form-control animated fadeIn custom-control" id="{{field.id}}"
+                                       type="{{field.type}}" ng-model="field.value"
+                                       ng-bind-attr="{required:'{{field.required}}'}"
+                                       value="{{field.value}}" placeholder="{{field.placeholder}}">
+                            </div>
+                            <div ng-switch-when="paragraph">
+                                {{field.paragraph}}
+                            </div>
+                            <div ng-switch-when="checkbox">
+                                <label>
+                                    <input type="checkbox" class="animated fadeIn custom-control"
+                                           ng-model="field.value" value="{{field.value}}" id="{{field.id}}" ng-checked="field.value == 'true'"
+                                           placeholder="{{field.instructions}}">
+                                    <span class="checkbox-helper"></span>
+                                </label>
+                            </div>
+
+                            <textarea class="form-control animated fadeIn custom-control" id="{{field.id}}"
+                                      ng-switch-when="textarea" ng-model="field.value"
+                                      placeholder="{{field.instructions}}">
+                                {{field.value}}
+                            </textarea>
+
+                            <textarea class="form-control animated fadeIn custom-control" id="{{field.id}}"
+                                      ng-switch-when="WYSIWYGEditor" ng-model="field.value" nsufroala froala="vm.froalaOptions"
+                                      placeholder="{{field.instructions}}">
+                                {{field.value}}
+                            </textarea>
+
+                            <select class="form-control animated fadeIn custom-control" id="{{field.id}}"
+                                    ng-switch-when="select" ng-model="field.value">
+                                <option ng-repeat="option in field.options"
+                                        value="{{option.value}}">
+                                    {{option.name}}
+                                </option>
+                            </select>
+
+                            <select class="form-control animated fadeIn custom-control" id="{{field.id}}"
+                                    ng-switch-when="multiple" ng-model="field.value" multiple>
+                                <option ng-repeat="option in field.options"
+                                        value="{{option.value}}">
+                                    {{option.name}}
+                                </option>
+                            </select>
+
+                            <fieldset ng-switch-when="radio">
+                                <label ng-repeat="option in field.options">
+                                    <input class="animated fadeIn custom-control" id="{{field.id}}"
+                                           type="radio" ng-model="field.value" value="{{option.value}}">
+                                    <span class="radio-helper"></span>{{option.name}}
+                                </label>
+                            </fieldset>
+
+                            <fieldset ng-switch-when="checkboxes">
+                                <label ng-repeat="option in field.options">
+                                    <input class="animated fadeIn custom-control" id="{{field.id}}"
+                                           type="checkbox" ng-model="field.value[option.name]"
+                                           value="{{option.value}}">
+                                    <span class="checkbox-helper"></span>{{option.name}}
+                                </label>
+                            </fieldset>
+
+                            <nsu-bootsrap-date-picker class="custom-control" id="{{field.id}}" ng-switch-when="calendar" format="shortdate" />
+
+                        </ng-switch>
+                    </div>
+                </div>
+            </ng-switch>
+        </div>
+    </div>
+</div>

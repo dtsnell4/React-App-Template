@@ -1,0 +1,17 @@
+<div class="panel panel-default">
+	<div class="panel-heading {{style.color}}" ng-class="{'panel-heading-active' : style.active}">
+		<h4 class="panel-title">
+			<a href data-toggle="collapse" ng-class="{'collapsed' : !style.startopen}" data-parent="#{{style.groupid}}" data-target="#{{style.targetid}}">
+				<span class="drag-bars"><div></div><div></div></span>
+				<span ng-bind-html="style.header"></span>
+				<i class="fa fa-angle-down pull-right"></i>
+			</a>
+		</h4>
+	</div>
+	<div class="panel-description description-padding" ng-if="style.preview">
+        <div class="panel-body" ng-bind-html="style.preview">
+        </div>
+    </div>
+	<div id="{{style.targetid}}" class="panel-collapse collapse" ng-class="{'in' : style.startopen}" ng-transclude>
+	</div>
+</div>

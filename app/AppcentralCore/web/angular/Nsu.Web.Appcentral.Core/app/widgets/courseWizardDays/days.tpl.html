@@ -1,0 +1,40 @@
+﻿<div class="row margin-top15px">
+    <label class="col-md-12" ng-if="vm.labels">{{'DAY(S)'|translate}}</label>
+    <div class="col-md-7 course-wizard btn-group btn-group-justified" data-toggle="buttons">
+        <label class=" btn btn-primary btn-sm" ng-click="vm.SelectDay('M')" data-daylabel="M" ng-class=" vm.daysSelected.indexOf('M') > -1 ? 'active':''">
+            <input type="checkbox" autocomplete="off">  M<span class="hidden-md">on</span>
+        </label>
+        <label class=" btn btn-primary btn-sm" ng-click="vm.SelectDay('T')" data-daylabel="T" ng-class=" vm.daysSelected.indexOf('T') > -1 ? 'active':''">
+            <input type="checkbox" autocomplete="off"> T<span class="hidden-md">ue</span>
+        </label>
+        <label class="btn btn-primary btn-sm" ng-click="vm.SelectDay('W')" data-daylabel="W" ng-class=" vm.daysSelected.indexOf('W') > -1 ? 'active':''">
+            <input type="checkbox" autocomplete="off"> W<span class="hidden-md">ed</span>
+        </label>
+        <label class="btn btn-primary btn-sm" ng-click="vm.SelectDay('R')" data-daylabel="R" ng-class=" vm.daysSelected.indexOf('R') > -1 ? 'active':''">
+            <input type="checkbox" autocomplete="off"> <span class="hidden-md">Thur</span><span class="visible-md">R</span>
+        </label>
+        <label class="btn btn-primary btn-sm" ng-click="vm.SelectDay('F')" data-daylabel="F" ng-class=" vm.daysSelected.indexOf('F') > -1 ? 'active':''">
+            <input type="checkbox" autocomplete="off"> F<span class="hidden-md">ri</span>
+        </label>
+        <label class="btn btn-primary btn-sm" ng-click="vm.SelectDay('S')" data-daylabel="S" ng-class=" vm.daysSelected.indexOf('S') > -1 ? 'active':''">
+            <input type="checkbox" autocomplete="off"> S<span class="hidden-md">at</span>
+        </label>
+        <label class="btn btn-primary btn-sm" ng-click="vm.SelectDay('U')" data-daylabel="U" ng-class=" vm.daysSelected.indexOf('U') > -1 ? 'active':''">
+            <input type="checkbox" autocomplete="off"> <span class="hidden-md">Sun</span><span class="visible-md">U</span>
+        </label>
+    </div>
+</div>
+<div class="row margin-top15px">
+    <label class="col-md-12" ng-if="vm.labels">{{'TIME'|translate}}</label>
+    <div class="col-md-4 course-wizard btn-group btn-group-justified" data-toggle="buttons">
+        <label class="btn btn-primary btn-sm" ng-click="vm.selectPartOfDay('M')" ng-class=" vm.partOfDaySelected.indexOf('M') > -1 ? 'active':''">
+            <input type="checkbox" autocomplete="off"> {{'MORNING'|translate}}
+        </label>
+        <label class="btn btn-primary btn-sm" ng-click="vm.selectPartOfDay('A')" ng-class=" vm.partOfDaySelected.indexOf('A') > -1 ? 'active':''">
+            <input type="checkbox" autocomplete="off"> {{'AFTERNOON'|translate}}
+        </label>
+        <label class="btn btn-primary btn-sm" ng-click="vm.selectPartOfDay('E')" ng-class=" vm.partOfDaySelected.indexOf('E') > -1 ? 'active':''">
+            <input type="checkbox" autocomplete="off"> {{'EVENING'|translate}}
+        </label>
+    </div>
+</div>

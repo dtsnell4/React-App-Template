@@ -1,0 +1,21 @@
+﻿.fileinput {
+    display: inline-block;
+    margin-bottom: 9px;
+    position: relative;
+}
+.fileinput .btn {
+  vertical-align: middle;
+}
+.btn-file > input {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    font-size: 23px;
+    cursor: pointer;
+    opacity: 0;
+}
+input[type="file"] {
+  display: block;
+  width: 100%;
+}

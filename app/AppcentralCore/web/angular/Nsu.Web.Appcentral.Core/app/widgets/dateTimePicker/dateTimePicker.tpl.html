@@ -1,0 +1,13 @@
+﻿
+<div class="dropdown span4">
+    <a class="dropdown-toggle ss {{vm.id}}" id="{{vm.id}}" role="button" data-toggle="{{vm.toggle}}" data-target="#" href="">
+        <div class="input-group">
+            <span class="input-group-addon primary"><i class="glyphicon glyphicon-calendar"></i></span>
+            <input type="text" class="form-control" ng-disabled="vm.isdisabled" value="{{ ngModel | date : vm.inputformat }}">
+        </div>
+    </a>
+    <ul class="dropdown-menu {{vm.cssclass }}" role="menu" aria-labelledby="dLabel">
+        <datetimepicker ng-model="ngModel"
+                        data-datetimepicker-config="{ dropdownSelector: '.{{vm.id}}', startView:'{{vm.startview}}', minView:'{{vm.minview}}'  }" />
+    </ul>
+</div>

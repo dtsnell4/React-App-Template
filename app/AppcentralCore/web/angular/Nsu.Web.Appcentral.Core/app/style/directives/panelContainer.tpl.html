@@ -1,0 +1,14 @@
+
+<div>
+  <div class="row" ng-if="style.paneltype === 'tile'">
+    <div class="col-md-12">
+      <div class="panel panel-default panel-square" ng-transclude> </div>
+    </div>
+  </div>
+  <div ng-if="style.paneltype === 'panel'" class="panel panel-default panel-square" ng-transclude> </div>
+  <div ng-if="style.paneltype === 'card'" class="col-sm-6 col-md-6 col-lg-4">
+    <div class="card nohover">
+      <div class="panel panel-default panel-square"  ng-transclude> </div>
+    </div>
+  </div>
+</div>

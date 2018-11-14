@@ -1,0 +1,13 @@
+﻿<div class="head">
+    <h3>{{ vm.title }}<span ng-show="vm.newmessages > 0">({{ vm.unreadmessages }} new)</span></h3>
+    <!--<input type="text" class="form-control" placeholder="Search mail...">-->
+      
+    <div class="input-group">
+        <input id="searchText" type="search" class="form-control" ng-keyup="$event.keyCode == 13 ? vm.searching() : null"  ng-model="vm.search" />
+        <div class="input-group-btn">
+            <button class="btn btn-default" type="submit" ng-click="vm.searching()" ng-enter="vm.searching()" style="background-color:#0287cc;"><i class=" glyphicon glyphicon-search" style="color:white;"></i></button>
+        </div>
+    </div>
+
+
+</div>   

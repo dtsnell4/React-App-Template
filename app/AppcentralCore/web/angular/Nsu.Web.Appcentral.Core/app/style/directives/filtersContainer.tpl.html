@@ -1,0 +1,24 @@
+﻿<div class="filter-block closed">
+ 	<button id="show-filters" ng-click="vm.activate()" class="btn btn-default btn-padding btn-sm closed">
+        <i class="fa fa-plus hidden-md hidden-lg"></i><i class="fa fa-minus hidden hidden-md hidden-lg"></i>
+        <i class="fa fa-chevron-up hidden-sm hidden-xs"></i><i class="fa fa-chevron-down hidden hidden-sm hidden-xs"></i>
+    	 Filters
+  	</button>
+	<div class="filter-content closed">
+		<div class="row no-margin hidden-sm hidden-xs">
+			<div class="col-xs-12 filter-header">
+				<a href="" id="pin-filters" class="rotateLeft90 hidden-sm hidden-xs" ng-click="vm.pinFilters()">
+					<i class="fa fa-thumb-tack" title="Pin Filters"></i> 
+				</a>
+				<span>Filters</span>
+				<a href="" id="close-filters" class="hidden-sm hidden-xs" ng-click="vm.activate()">
+					<i class="fa fa-times"></i> 
+				</a>
+			</div>
+		</div>
+		<div class="row no-margin">
+      		<div class="col-xs-12" ng-transclude>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,33 @@
+﻿.dropdown-menu-long {
+    max-height: calc(100vh - 80px);
+    overflow: auto;
+}
+.dropdown-menu-medium {
+    max-height: 60vh;
+    overflow: auto;
+}
+.dropdown-menu-short {
+    height: 40vh;
+    overflow: auto;
+}
+@media (max-width: 768px) {
+    .dropdown-menu {
+      /*width: 100vw;*/
+    }
+    .dropdown-menu.dropdown-menu-sm-fixed {
+        width: 100vw;
+        position: fixed;
+        top:initial;
+        margin-top:30px;
+    }
+    .dropdown-menu-long {
+        max-height: calc(100vh - 160px);
+    }
+}
+.not-nav .dropdown-menu:before {
+    right: 13px;
+    left: initial;
+}
+.dropdown-hover:hover + .dropdown-menu {
+    display: block;
+}

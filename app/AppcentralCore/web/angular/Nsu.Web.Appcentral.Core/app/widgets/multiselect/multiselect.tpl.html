@@ -1,0 +1,38 @@
+﻿<div class="col-sm-6">
+    <div class="control-group" id="populationDropdown">
+
+        <div class="controls">
+            <select ng-model="ngModel"
+                    style="display: none;"
+                    id="multiDropdown"
+                    multiple="multiple"
+                    class="col-sm-2 hidden"
+                    name="items"
+                    multiselect>
+                <option ng-repeat="items in ngModel" value="{{items.id}}"></option>
+            </select>
+
+            <div class="btn-group">
+                <button type="button" class="multiselect dropdown-toggle btn btn-default" data-toggle="dropdown" type="button"
+                        title="Population" aria-expanded="true">
+                    {{selectionText}}
+                    <b class="caret"></b>
+                </button>
+
+                <ul class="multiselect-container dropdown-menu" ng-click="$event.stopPropagation();">
+                    <li ng-repeat="items in ngModel">
+                        <a class="multiselect" href="javascript:void(0);">
+                            <label class="checkbox">
+                                <input value={{items}}
+                                       type="checkbox"
+                                       ng-checked='PopulationIds.indexOf(population) > -1'
+                                       ng-click='toggle(items)' />
+                                {{items.name}}
+                            </label>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,43 @@
+﻿table.mobile-table span.mobile-show, table.mobile-table label.mobile-show {
+	display: none;
+}
+table tr:nth-child(2n) {
+	background: #f8f8f8;
+}
+
+@media only screen and (max-width : 767px) {
+table.mobile-table {
+	border-collapse: collapse;
+}
+table.mobile-table tr {
+	display: block;
+	margin-bottom: 10px;
+}
+table.mobile-table td {
+	display: block;
+	padding: 5px;
+	width: 100%;
+	word-break: break-all;
+}
+table.mobile-table tr.mobile-hide, table.mobile-table td.mobile-hide, table.mobile-table thead.mobile-hide, table.mobile-table tbody.mobile-hide {
+	display: none;
+}
+table.mobile-table span.mobile-show {
+	display: inline;
+	font-weight: bold;
+}
+table.mobile-table label.mobile-show {
+	display: block;
+}
+table.mobile-table {
+	width: 100%;
+}
+}
+@media only screen and (min-width : 768px) {
+table.mobile-table tr.mobile-hide, table.mobile-table td.mobile-hide, table.mobile-table thead.mobile-hide, table.mobile-table tbody.mobile-hide {
+	display:table-header-group;
+	}
+}
+table tr.whitebg {
+		background: #fff;
+}

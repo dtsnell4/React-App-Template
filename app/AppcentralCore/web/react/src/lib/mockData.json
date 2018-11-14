@@ -1,0 +1,238 @@
+{
+  "attributes": [
+    {
+      "Id": 0,
+      "Title": "WIFI"
+    },
+    {
+      "Id": 1,
+      "Title": "PROJECT"
+    },
+    {
+      "Id": 2,
+      "Title": "APPLE TV"
+    },
+    {
+      "Id": 3,
+      "Title": "COUCH"
+    },
+    {
+      "Id": 4,
+      "Title": "WHITEBOARD"
+    },
+    {
+      "Id": 5,
+      "Title": "CONFERENCE BRIDGE"
+    }
+  ],
+  "rooms": [
+    {
+      "CreatedAt": "",
+      "RoomId": "1",
+      "Number": "3142",
+      "Name": "3D Print Lab",
+      "Type": {
+        "Title": "Bookable"
+      },
+      "active": true,
+      "Score": 1,
+      "BuildingId": "_607186_34",
+      "CampusId": "_607186_1",
+      "MinCapacity": 2,
+      "MaxCapacity": 8,
+      "IsFavorite": true,
+      "IsAvailable": false,
+      "Floor": 4,
+      "Building": "Health Professions Division",
+      "Description": "Scan, design, and 3D print prototypes or other anatomy/medical models.",
+      "PictureURL": "Images/3DPrinterIcon.png"
+    }
+  ],
+  "buildings": [
+    {
+      "BuildingId": "_607186_61",
+      "CampusId": "_607186_1",
+      "Name": "Alvin Sherman Library",
+      "IsFavorite": false,
+      "active": true,
+      "PictureURL": "Images/AlvinShermanLibraryIcon.png",
+      "Description": "This is the Building description missing from mock data"
+    },
+    {
+      "BuildingId": "_607186_112",
+      "Name": "Carl DeSantis",
+      "CampusId": "_607186_1",
+      "IsFavorite": true,
+      "active": true,
+      "PictureURL": "Images/DeSantisIcon.png",
+      "Description": "This is the Building description missing from mock data"
+    },
+    {
+      "BuildingId": "_607186_34",
+      "Name": "Health Professions Division Building",
+      "IsFavorite": true,
+      "active": true,
+      "CampusId": "_607186_1",
+      "PictureURL": "Images/WilliamAdministrationBuildingIcon.png",
+      "Description": "This is the Building description missing from mock data"
+    },
+    {
+      "BuildingId": "_607186_25",
+      "Name": "The Rick Case Arena The Don Taft University Center",
+      "IsFavorite": true,
+      "active": true,
+      "CampusId": "_607186_1",
+      "PictureURL": "Images/TheRickCaseIcon.png",
+      "Description": "This is the Building description missing from mock data"
+    },
+    {
+      "BuildingId": "_607186_22",
+      "Name": "Mailman -Holliwood Building",
+      "IsFavorite": true,
+      "active": true,
+      "CampusId": "_607186_1",
+      "PictureURL": "Images/MailmanHollywoodIcon.png",
+      "Description": "This is the Building description missing from mock data"
+    },
+    {
+      "BuildingId": "_607186_33",
+      "Name": "Horvitz Administration Building",
+      "IsFavorite": true,
+      "active": true,
+      "CampusId": "_607186_1",
+      "PictureURL": "Images/WilliamAdministrationBuildingIcon.png",
+      "Description": "This is the Building description missing from mock data"
+    },
+    {
+      "BuildingId": "_607186_71",
+      "Name": "The Leo Goodwin Sr.Hall",
+      "IsFavorite": false,
+      "active": true,
+      "CampusId": "_607186_1",
+      "PictureURL": "Images/TheLeoGoodwinSrHallIcon.png",
+      "Description": "This is the Building description missing from mock data"
+    },
+    {
+      "BuildingId": "_607186_11",
+      "Name": "MaxWell Maltz Building",
+      "IsFavorite": false,
+      "active": true,
+      "CampusId": "_607186_1",
+      "PictureURL": "Images/MaxwellMaltzBuildingIcon.png",
+      "Description": "This is the Building description missing from mock data"
+    },
+    {
+      "BuildingId": "_607186_91",
+      "Name": "Rosenthal Student Center",
+      "IsFavorite": false,
+      "active": false,
+      "CampusId": "_607186_1",
+      "PictureURL": "Images/TheRosenthalStudentCenterIcon.png",
+      "Description": "This is the Building description missing from mock data"
+    },
+    {
+      "BuildingId": "_607186_72",
+      "Name": "Rosenthal Student Center",
+      "IsFavorite": false,
+      "active": false,
+      "CampusId": "_607186_1",
+      "PictureURL": "Images/TheRosenthalStudentCenterIcon.png",
+      "Description": "This is the Building description missing from mock data"
+    },
+    {
+      "BuildingId": "_607186_73",
+      "Name": "Rosenthal Student Center",
+      "IsFavorite": false,
+      "active": false,
+      "CampusId": "_607186_1",
+      "PictureURL": "Images/TheRosenthalStudentCenterIcon.png",
+      "Description": "This is the Building description missing from mock data"
+    },
+    {
+      "BuildingId": "_607186_74",
+      "Name": "Rosenthal Student Center",
+      "IsFavorite": false,
+      "active": false,
+      "CampusId": "_607186_1",
+      "PictureURL": "Images/TheRosenthalStudentCenterIcon.png",
+      "Description": "This is the Building description missing from mock data"
+    },
+    {
+      "BuildingId": "_607186_75",
+      "Name": "Rosenthal Student Center",
+      "IsFavorite": false,
+      "active": false,
+      "CampusId": "_607186_1",
+      "PictureURL": "Images/TheRosenthalStudentCenterIcon.png",
+      "Description": "This is the Building description missing from mock data"
+    }
+  ],
+  "campus": [
+    {
+      "CampusId": "_607186_1",
+      "Name": "Fort Lauderdale/Davie, Florida",
+      "IsFavorite": true,
+      "PictureURL": "./app/lib/tempImage/MainFtLauderdaleIcon.png"
+    },
+    {
+      "CampusId": "_607186_2",
+      "Name": "Clearwater, Florida",
+      "IsFavorite": true,
+      "PictureURL": "./app/lib/tempImage/ClearwaterIcon.png"
+    },
+    {
+      "CampusId": "_607186_3",
+      "Name": "Fort Myers, Florida",
+      "IsFavorite": true,
+      "PictureURL": "./app/lib/tempImage/FortMyersIcon.png"
+    },
+    {
+      "CampusId": "_607186_4",
+      "Name": "Jacksonville, Florida",
+      "IsFavorite": false,
+      "PictureURL": "./app/lib/tempImage/JacksonvilleIcon.png"
+    },
+    {
+      "CampusId": "_607186_5",
+      "Name": "Miami-Kendall, Florida",
+      "IsFavorite": false,
+      "PictureURL": "./app/lib/tempImage/MiamiKendallIcon.png"
+    },
+    {
+      "CampusId": "_607186_6",
+      "Name": "Miramar ,Florida",
+      "IsFavorite": false,
+      "PictureURL": "./app/lib/tempImage/MiramarIcon.png"
+    },
+    {
+      "CampusId": "_607186_7",
+      "Name": "Orlando, Florida",
+      "IsFavorite": false,
+      "PictureURL": "./app/lib/tempImage/OrlandoIcon.png"
+    },
+    {
+      "CampusId": "_607186_8",
+      "Name": "Palm Beach, Florida",
+      "IsFavorite": false,
+      "PictureURL": "./app/lib/tempImage/PalmBeachIcon.png"
+    },
+    {
+      "CampusId": "_607186_9",
+      "Name": "Tampa, Florida",
+      "IsFavorite": false,
+      "PictureURL": "./app/lib/tempImage/TampaIcon.png"
+    },
+    {
+      "CampusId": "_607186_10",
+      "Name": "San Juan Puerto Rico, Florida",
+      "IsFavorite": false,
+      "PictureURL": "./app/lib/tempImage/SanJuanPuertoRicoIcon.png"
+    },
+    {
+      "CampusId": "_607186_11",
+      "Name": "Second Fort Lauderdale/Davie, Florida",
+      "IsFavorite": true,
+      "PictureURL": "./app/lib/tempImage/MainFtLauderdaleIcon.png"
+    }
+  ]
+}

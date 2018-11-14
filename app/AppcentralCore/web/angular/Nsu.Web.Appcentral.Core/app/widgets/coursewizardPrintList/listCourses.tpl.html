@@ -1,0 +1,149 @@
+﻿<style type="text/css">
+    @media print {
+        .panel-default .course-wizard-blue {
+            background-color: #0287cc !important;
+        }
+        .panel-title>a {
+            color: #fda !important;
+        }
+        .panel-default .panel-heading a {
+            display: block;
+            color: white !important;
+        }
+        .panel-default .panel-heading a:after {
+            display: none;
+        }
+        p,
+        span,
+        th,
+        td {
+            font-size: 14px !important;
+        }
+        table tr:nth-child(2n) {
+            background: #f1f1f1 !important;
+        }
+        .color-warning td,
+        .color-warning span {
+            color: #f16e3f !important;
+        }
+        h3.header {
+            font-size: 24px !important;
+        }
+        table tr td,
+        tr,
+        th {
+            page-break-inside: avoid;
+        }
+        .course-Head-Style .bg-success {
+            background-color: #28a645 !important;
+            color: #fff !important;
+            font-weight: 600;
+        }
+        .course-Head-Style .full-class {
+            background-color: #ea6153 !important;
+            color: #fff !important;
+        }
+        .course-Head-Style {
+            background-color: #e9e9e9 !important;
+        }
+    }
+</style>
+
+<div ng-if="vm.pagedCollection.length === 0">
+    <div class="list-group group-border-dashed">
+        <p>
+            <h3 id="selectgroup">
+                Loading Courses...
+            </h3>
+        </p>
+    </div>
+</div>
+
+<accordion2>
+
+    <div class="panel panel-default accordion-margin-b" ng-repeat="course in vm.pagedCollection">
+        <div class="panel-heading course-public-style">
+            {{course.subjectCode}} {{course.number}} {{course.name}} ({{course.creditsRange}} Credits)
+        </div>
+        <div class="panel-body">
+            <strong>{{'DESCRIPTION'|translate}}:</strong><br />
+            <p>{{course.description}}</p>
+            <div class="outcome-padding">
+                <strong>{{'LEARNING_OUTCOMES'|translate}}:</strong><br />
+                <span class="outcome-wrap">{{ vm.trim(course.outcomes) == 0 ? ('NONE_LISTED'|translate) : course.outcomes}}</span><br
+                />
+                <br />
+            </div>
+            <div ng-repeat="class in course.classes">
+                <div class="row class-borders no-margin course-Head-Style">
+                    <div class="col-xs-3 no-left-padding no-padding-sm">
+                        <div class="bg-success" ng-if="vm.hasEnrollmentRole && !vm.publicSite && (class.maxEnroll > class.enrolled)">
+                            Enrolled/Max: {{class.enrolled}}/{{class.maxEnroll}}
+                        </div>
+                        <div class="ng-binding full-class" ng-if="(class.maxEnroll <= class.enrolled) && class.waitListAvailable <= 0">
+                            Course Full
+                        </div>
+                        <div class="ng-binding waitlist" ng-if="(class.maxEnroll <= class.enrolled) && class.waitListAvailable > 0 && vm.publicSite === false">
+                            Waitlist Remaining: {{class.waitListAvailable}}
+                        </div>
+                        <div class="ng-binding waitlist" ng-if="(class.maxEnroll <= class.enrolled) && class.waitListAvailable > 0 && vm.publicSite !== false">
+                            Waitlist Available
+                        </div>
+                    </div>
+                    <div class="col-xs-5">
+                        <div> <strong>CRN:</strong> {{class.crn}} <strong>Sec:</strong> {{class.seqNum}} <strong>Cr:</strong>
+                            {{class.credits}} </div>
+                    </div>
+                    <div class="col-xs-4 border-left">
+                        <div> <strong>{{'FACULTY'|translate}}:</strong> <span ng-if="class.professor.lastName != null">{{class.professor.lastName}},</span>
+                            {{class.professor.firstName}}</div>
+                    </div>
+                </div>
+                <table class="no-border">
+                    <thead class="no-border nowrap">
+                        <tr class="background-white">
+                            <th class="text-center meetings-row-padding" width="10%">{{'DAY'|translate}}</th>
+                            <th class="text-center meetings-row-padding" width="20%">{{'DATE'|translate}}</th>
+                            <th class="text-center meetings-row-padding" width="20%">{{'TIME'|translate}}</th>
+                            <th class="text-center meetings-row-padding" width="25%">{{'LOCATION'|translate}}</th>
+                            <th class="text-center meetings-row-padding" width="25%">{{'SYLLABI_BUILDING_ROOM'|translate}}</th>
+                        </tr>
+                    </thead>
+                    <tbody class="no-border-x no-border-y">
+                        <tr ng-repeat="meeting in class.meetings | orderBy:'startDate'" class="background-white" ng-class="meeting.type === 'EXAM' ? 'color-warning' : ''">
+                            <td class="text-center meetings-row-padding">
+                                {{vm.formatDays(meeting.days) || '-'}}
+                            </td>
+                            <td class="text-center meetings-row-padding">
+                                {{meeting.startDate | date:"MM/dd/yyyy"}} - {{meeting.endDate | date:"MM/dd/yyyy"}}
+                            </td>
+                            <td class="text-center meetings-row-padding">
+                                {{vm.formatCoursesTime(meeting.startTime)}} - {{vm.formatCoursesTime(meeting.endTime)}}
+                            </td>
+                            <td class="text-center meetings-row-padding"><span ng-if="class.location != ''">
+                                    {{class.location}} / ({{class.campusCode}})</span>
+                            </td>
+                            <td class="text-center meetings-row-padding">
+                                <span class="meetings-row-padding building-padding" ng-if="meeting.building != null && meeting.type != 'CHAT' ">{{meeting.building}}
+                                    / {{meeting.room}} </span>
+                                <span ng-if="meeting.type == 'CHAT' ">{{'SYLLABI_CHAT'|translate}}</span>
+                            </td>
+                        </tr>
+                        <tr ng-show="class.meetings.length == 0" class="background-white">
+                            <td class="text-center meetings-row-padding"></td>
+                            <td class="text-center meetings-row-padding"></td>
+                            <td class="text-center meetings-row-padding"></td>
+                            <td class="text-center meetings-row-padding">
+                                <span ng-if="class.location != ''">{{class.location}} / ({{class.campusCode}})</span>
+                            </td>
+                            <td ng-if="class.location == ''" colspan="5">
+                                <span>{{'NO_AVAILABLE'|translate}}</span>
+                            </td>
+                            <td class="text-center meetings-row-padding"><span class="meetings-row-padding building-padding"></span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</accordion2>

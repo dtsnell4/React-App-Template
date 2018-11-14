@@ -1,0 +1,52 @@
+﻿
+<div class="course-list-info clearfix" ng-if="vm.pagedCollection.length > 0">
+    <div class="pull-left margin-bottom20px">{{vm.totalclasses}} {{vm.daysIndicator}}</div>
+    <div class="pull-right margin-bottom20px color-warning exam-caption"><strong>{{'DENOTES_EXAM_TIME'|translate}}</strong> 
+        <span id="iconPrint" ng-click="vm.printResults()" class="padding-left-10px text-info cursor-pointer"><i ng-click="vm.printResults()" class="fa fa-print" aria-hidden="true"></i></span>
+    </div>
+</div>
+
+<div ng-if="vm.pagedCollection.length === 0">
+    <div class="list-group group-border-dashed">
+        <p>
+            <h3 id="selectgroup">
+                <span class="hidden-sm hidden-xs">
+                    {{'FILTERS_ON_LEFT'|translate}}
+                    <br>
+                    {{'SEARCH_FOR_COURSE'|translate}}.
+                    <span class="fa fa-arrow-circle-left fa-3x"></span>
+                </span>
+                <span class="visible-sm visible-xs">
+                    {{'FILTERS_ABOVE'|translate}}.
+                    <br>
+                    <span class="fa fa-arrow-circle-up fa-3x"></span>
+                </span>
+            </h3>
+        </p>
+    </div>
+</div>
+
+<accordion2 close-others="oneAtATime" startopen="true">
+    
+        <div class="panel panel-default accordion-margin-b" ng-if="course.tabs.length >= 1" ng-repeat="course in vm.pagedCollection">
+            <div class="panel-heading course-public-style">
+                <a style="cursor:pointer" class="" ng-click="vm.courseDetailUrl(course.subjectCode, course.number)">
+                    {{course.subjectCode}} {{course.number}} {{course.name}} ({{course.creditsRange}} Credits)
+                </a>
+            </div>
+            <div class="panel-body">
+                <p><strong>{{'DESCRIPTION'|translate}}: </strong></p>
+                <p>{{course.description}}</p>
+            </div>
+          </div>
+  <!--  <accordion-groupw ng-if="course.tabs.length >= 1" template-url="app/widgets/coursewizardListDetailCourses/accordion.tpl.html"
+                      heading="{{course.subjectCode}} {{course.number}} {{course.name}} ({{course.creditsRange}} Credits)"
+                      is-open="course.open"
+                      description="course.description"
+                      ng-repeat="course in vm.pagedCollection"
+                      class="accordion-margin-b">
+
+        <a style="cursor:pointer" class="pull-right margin-right10px margin5px" ng-click="vm.courseDetailUrl(course.subjectCode, course.number)">More details</a>
+         
+    </accordion-groupw> -->
+</accordion2>

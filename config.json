@@ -1,0 +1,28 @@
+{
+  "appname": "react_template",
+  "apptitle": "React Template",
+  "version": "0.0.1",
+  "clientName": "spaces",
+  "port": "8004",
+  "client": "./app/",
+  "index": "./app/index.html",
+  "js": [
+    "./App/**/*module*.js",
+    "./App/**/*.js"
+  ],
+  "build": "./dist/",
+  "baseUrl": {
+    "development": "",
+    "dev": "/appcentral2",
+    "test": "/appcentral2",
+    "stage": "/app2",
+    "prod": "/app2"
+  },
+  "login": {
+    "development": "http://localhost:8000/login",
+    "dev": "http://fldvd-webnet01.ad.nova.edu/appcentral2/appcentral/login",
+    "test": "http://fldvt-webnet01.ad.nova.edu/appcentral2/appcentral/login",
+    "prod": "http://appcentral.nova.edu/app2/appcentral/login",
+    "stage": "https://appcentral-stage.nova.edu/app2/appcentral/login"
+  }
+}

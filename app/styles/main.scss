@@ -1,0 +1,65 @@
+//////////////////
+// Vendor files //
+//////////////////
+@import "../AppcentralCore/web/react/styles/vendor/flatdream";
+@import "../AppcentralCore/web/react/styles/vendor/fontawesome/css/font-awesome.min.css";
+@import '../../node_modules/react-redux-toastr/src/styles/index.scss';
+// Uploader Css this should be moved to the component
+// @import "../AppcentralCore/web/react/styles/vendor/syncfusion-uploader-calendar";
+
+
+////////////////////////////////
+// Required Bootstrap 4 files //
+////////////////////////////////
+@import "../AppcentralCore/web/react/styles/appcentral-bootstrap/functions";
+@import "../AppcentralCore/web/react/styles/appcentral-bootstrap/variables";
+@import "../AppcentralCore/web/react/styles/appcentral-bootstrap/mixins";
+@import "../AppcentralCore/web/react/styles/appcentral-bootstrap/utilities";
+@import "../AppcentralCore/web/react/styles/appcentral-bootstrap/reboot";
+@import "../AppcentralCore/web/react/styles/appcentral-bootstrap/grid";
+@import "../AppcentralCore/web/react/styles/appcentral-bootstrap/type";
+@import "../AppcentralCore/web/react/styles/appcentral-bootstrap/images";
+@import "../AppcentralCore/web/react/styles/appcentral-bootstrap/buttons";
+@import "../AppcentralCore/web/react/styles/appcentral-bootstrap/dropdown";
+@import "../AppcentralCore/web/react/styles/appcentral-bootstrap/close";
+@import "../AppcentralCore/web/react/styles/appcentral-bootstrap/transitions";
+@import "../AppcentralCore/web/react/styles/appcentral-bootstrap/nav";
+@import "../AppcentralCore/web/react/styles/appcentral-bootstrap/navbar";
+
+
+////////////////////////////////
+// Optional Bootstrap 4 files //
+////////////////////////////////
+// @import "../AppcentralCore/web/react/styles/appcentral-bootstrap/alert";
+// @import "../AppcentralCore/web/react/styles/appcentral-bootstrap/badge";
+// @import "../AppcentralCore/web/react/styles/appcentral-bootstrap/breadcrumb";
+// @import "../AppcentralCore/web/react/styles/appcentral-bootstrap/button-group";
+// @import "../AppcentralCore/web/react/styles/appcentral-bootstrap/card";
+// @import "../AppcentralCore/web/react/styles/appcentral-bootstrap/code";
+// @import "../AppcentralCore/web/react/styles/appcentral-bootstrap/carousel";
+// @import "../AppcentralCore/web/react/styles/appcentral-bootstrap/custom-forms";
+// @import "../AppcentralCore/web/react/styles/appcentral-bootstrap/forms";
+// @import "../AppcentralCore/web/react/styles/appcentral-bootstrap/input-group";
+// @import "../AppcentralCore/web/react/styles/appcentral-bootstrap/list-group";
+// @import "../AppcentralCore/web/react/styles/appcentral-bootstrap/jumbotron";
+// @import "../AppcentralCore/web/react/styles/appcentral-bootstrap/media";
+// @import "../AppcentralCore/web/react/styles/appcentral-bootstrap/modal";
+// @import "../AppcentralCore/web/react/styles/appcentral-bootstrap/pagination";
+// @import "../AppcentralCore/web/react/styles/appcentral-bootstrap/popover";
+// @import "../AppcentralCore/web/react/styles/appcentral-bootstrap/print";
+// @import "../AppcentralCore/web/react/styles/appcentral-bootstrap/progress";
+// @import "../AppcentralCore/web/react/styles/appcentral-bootstrap/tables";
+// @import "../AppcentralCore/web/react/styles/appcentral-bootstrap/tooltip";
+
+
+///////////////////////
+// AppCentral Styles //
+///////////////////////
+@import "../AppcentralCore/web/react/styles/sidenav";
+@import "../AppcentralCore/web/react/styles/content-area";
+@import "../AppcentralCore/web/react/styles/filters";
+// @import "../AppcentralCore/web/react/styles/syncf-uploader";
+
+////////////////////////////////
+// Custom Styles for this app //
+////////////////////////////////

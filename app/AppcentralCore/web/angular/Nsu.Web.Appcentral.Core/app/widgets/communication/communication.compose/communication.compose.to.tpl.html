@@ -1,0 +1,16 @@
+﻿<div class="to">
+    <div class="form-group required" show-errors>
+
+        <label class="col-sm-1 control-label">To:</label>
+        <div class="col-sm-11">
+            <input name="recipient"  maxlength="10" type="text" class="form-control" ng-model="vm.message.recipient" placeholder="Recipients" required />
+            <div ng-messages="messageform.recipient.$error" ng-show="messageform.recipient.$error && messageform.recipient.$dirty" ng-messages-include="error-messages">
+            </div>
+        </div>
+
+    </div>
+</div>
+     
+
+
+

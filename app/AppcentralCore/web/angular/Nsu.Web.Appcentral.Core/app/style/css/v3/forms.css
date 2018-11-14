@@ -1,0 +1,75 @@
+﻿.form-control {
+	width: 100%;
+}
+.form-group button {
+	margin-bottom: 0 !important;
+}
+.form-inline .form-group {
+	margin-right: 15px;
+}
+
+.form-group label {
+    position: relative;
+}
+.checkbox-helper, .radio-helper {
+    margin-left: 10px;
+}
+.checkbox-helper:before, .radio-helper:before {
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    font-family: 'FontAwesome';
+    position: absolute;
+    left: -1px;
+    top: 2px;
+}
+
+.checkbox-helper:before {
+    content:"\00a0";
+    border-radius: 5px;
+    background-color:#d7dcde;
+}
+input[type=checkbox]:checked + .checkbox-helper:before {
+    content:"\f00c";
+    background-color: #19b698;
+    color:#fff;
+    padding: 2px 4px; 
+    font-size: 13px;
+}
+@media (max-width: 767px) { 
+    input[type=checkbox]:checked + .checkbox-helper:before {
+        padding: 0px 4px; 
+    }
+}
+input[type=checkbox]:disabled + .checkbox-helper:before {
+    cursor: not-allowed;
+}
+.radio-helper:before {
+    content: "\f10c";
+    font-size: 22px;
+    color:#bec2c3;
+    background-color: #fff;
+    border-radius: 50%;
+    top: 4px;
+}
+input[type=radio]:focus, input[type=radio]:focus {
+    outline: none;
+}
+input[type=radio]:checked + .radio-helper:before {
+    color: #19b698;
+    content: "\f192"; 
+}
+nsu-bootsrap-date-picker[format*="time"] .glyphicon-calendar:before {
+    content: "\e023";
+}
+nsu-bootsrap-date-picker .form-control[readonly], nsu-bootsrap-date-picker .form-control[readonly]:focus, nsu-bootsrap-date-picker .input-group-addon {
+    background-color: #fff;
+}
+nsu-bootsrap-date-picker input.form-control[disabled], .nsudatapicker input[disabled] + .input-group-addon {
+    cursor: not-allowed;
+    background-color: #eee;
+}
+#generated-links input[readonly] {
+    cursor: text;
+    background-color: rgb(235, 235, 228);
+}

@@ -1,0 +1,105 @@
+﻿<div class="mails2">
+
+    <div ng-if="vm.getmessages" ng-repeat="message in vm.getmessages"
+         ng-click="inboxRow.detail(message.id, vm.page)"
+         class="item {{message.isSender == false && message.recipients[0].read && 'read' || message.isSender == false && 'unread' || message.isSender == true && 'sender'}}">
+
+        <div>
+            <!--<div class="icheckbox_square-blue checkbox" aria-checked="false" aria-disabled="false">
+                <div class="icheckbox_square-blue">
+                <input type="checkbox" name="checkbox" style="position: absolute; opacity: 0;">
+                <ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; opacity: 0; background: rgb(255, 255, 255);"></ins>
+                </div>-->
+
+        </div>
+
+        <div>
+            <span class="date pull-right"><!--<i class="fa fa-paperclip"></i>--> {{ message.dateCreated | date: "MMM d" }} &nbsp;</span>
+            <span ng-show="message.isSender == false && message.recipients[0].replied" class="date pull-right"><i class="fa fa-reply"></i> &nbsp;</span>
+
+            <h4 class="from" ng-hide="message.isSender">
+                {{ message.senderFirstName + ' ' + message.senderLastName }}
+            </h4>
+
+            <h4 class="from" ng-hide="!message.isSender">
+                {{ message.recipients[0].recipientFirstName + ' ' + message.recipients[0].recipientLastName }} <!--Receipient name goes here-->
+            </h4>
+            <p class="msg">{{ message.subject }} &nbsp;</p>
+        </div>
+    </div>
+
+    <div style="text-align:center;" class="cl-mcont" ng-if="vm.norows">
+        <span>No messages found.</span>
+    </div>
+
+
+
+</div>
+
+
+
+<style>
+
+    .mails2 .item {
+    border-bottom: 1px solid #D8D8D8;
+    padding: 17px 20px;
+    display: table;
+    width: 100%;
+    cursor: pointer;
+    }
+
+    .mails2 .item > div {
+    vertical-align: top;
+    display: table-cell;
+    }
+
+    .mails2 .item > div:first-child {
+    width: 35px;
+    }
+
+    .mails2 .item > div:first-child > div {
+    margin-top: 2px;
+    }
+
+    .mails2 .item .from {
+    font-weight: 600;
+    font-size: 13px;
+    margin: 0 0 3px 0;
+    }
+
+    .mails2 .item .date i {
+    margin-right: 7px;
+    font-size: 14px;
+    }
+
+    .mails2 .item .msg {
+    font-size: 12px;
+    margin: 0;
+    }
+
+    .sender {
+    /*background: rgba(240,240,240,.150);*/
+    background: #fff;
+    }
+
+    .sender.item:nth-child(even) {
+  
+     background: rgba(0,0,0,.015);
+     /*background: rgba(240,240,240,.350);*/
+
+    }
+
+    .mails2 .item:hover {
+    background: rgba(0,0,0,.100);
+    }
+
+    .read {
+    background: rgba(240,240,240,.999);
+    /*background-color:#D8D8D8;*/
+    }
+
+    .unread {
+    background-color: white;
+    }
+
+</style>

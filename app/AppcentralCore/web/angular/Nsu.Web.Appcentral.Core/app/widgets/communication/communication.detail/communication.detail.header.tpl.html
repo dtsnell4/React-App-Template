@@ -1,0 +1,18 @@
+﻿<div class="head" >
+    <h3>
+        {{ vm.getmessage.senderFirstName + ' ' + vm.getmessage.senderLastName }}  &nbsp;
+        <span >
+            <!--<a href="#" ng-click="detailHeader.inbox()"><i class="fa fa-inbox"></i></a>-->
+            <!--<a href="#" ng-click="detailHeader.reply(vm.getmessage.id)"><i class="fa fa-reply"></i></a>-->
+            <a href="#" ng-hide="vm.getmessage.parent" onclick="window.print()"><i class="glyphicon glyphicon-print"></i></a>
+        </span>
+    </h3>
+    <h4>{{ vm.getmessage.subject }}  &nbsp;<span><a href="#"><!--<i class="fa fa-star"></i>--></a> &nbsp; {{ vm.getmessage.dateCreated | date: "MMM d" }}, {{ vm.getmessage.dateCreated | date:'h:mm a' }} &nbsp;</span></h4>
+</div>
+  
+
+
+
+
+
+

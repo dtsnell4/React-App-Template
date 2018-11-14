@@ -1,0 +1,37 @@
+﻿<div class="cl-toggle" ng-click="sidebar.toggleSidebarMobile()"><i class="fa fa-bars"></i></div>
+<div class="cl-navblock">
+    <div class="menu-space">
+        <div class="content">
+            <a href="{{sidebar.dashboard}}" title="NSU APP CENTRAL">
+                <div class="sidebar-logo">
+                    <div class="logo">
+
+                    </div>
+                </div>  
+            </a>      
+
+            <div class="text-right collapse-button" style="padding: 7px 9px;">
+                <span class="navtitle pull-left">{{'NAVIGATION' | translate}}</span>
+                <button id="sidebar-collapse" class="btn btn-default" style="" ng-click="sidebar.toggleSidebar()"><i class="fa fa-thumb-tack"></i><i class="fa fa-bars"></i></button>
+            </div>
+            <ul class="cl-vnavigation">
+                <li ng-repeat="item in sidebar.menu" ng-class="{'open': item.open, 'parent': item.submenu.length > 0, 'active': item.active}"
+                    ng-cloak ng-if="sidebar.compareRoles(sidebar.rolesInUser,item.roles)">
+                    <a ng-click="sidebar.open(item)">
+                        <span ng-if="item.label" class="label label-primary pull-right">{{::item.label | translate}}</span>
+                        <i class="fa " ng-class="item.icon"></i>                        
+                        <span>{{::item.title | translate}}</span>
+                    </a>
+                    <ul class="sub-menu" ng-hide="!item.open">
+                        <li ng-repeat="subitem in item.submenu" ng-class="{'active': subitem.active}"
+                            ng-cloak ng-if="sidebar.compareRoles(sidebar.rolesInUser,subitem.roles)">
+                            <a ng-href="{{::sidebar.slug}}{{::subitem.path}}">{{::subitem.title | translate}}</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="branding">
+</div>

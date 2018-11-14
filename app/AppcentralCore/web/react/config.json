@@ -1,0 +1,51 @@
+{
+  "appname": "AppcentralCore",
+  "apptitle": "AppcentralCore",
+  "version": "0.0.1",
+  "port": "8003",
+  "index": "./app/index.html",
+  "build": "./dist/",
+  "api": {
+    "AppCentral": {
+      "development": "http://fldvd-apinet01.ad.nova.edu/appcentral/appcentral",
+      "dev": "http://fldvd-apinet01.ad.nova.edu/appcentral/appcentral",
+      "test": "http://fldvt-apinet01.ad.nova.edu/appcentral/appcentral",
+      "stage": "https://api-stage.nova.edu/appcentral/appcentral",
+      "prod": "https://api.nova.edu/appcentral/appcentral"
+    },
+    "EventCalendar": {
+      "development": "http://fldvd-apinet01.ad.nova.edu/appcentral/eventcalendar",
+      "dev": "http://fldvd-apinet01.ad.nova.edu/appcentral/eventcalendar",
+      "test": "http://fldvt-apinet01.ad.nova.edu/appcentral/eventcalendar",
+      "stage": "https://api-stage.nova.edu/appcentral/eventcalendar",
+      "prod": "https://api.nova.edu/appcentral/eventcalendar"
+    },
+    "Communication": {
+      "development": "http://fldvd-apinet01.ad.nova.edu/appcentral/communication",
+      "dev": "http://fldvd-apinet01.ad.nova.edu/appcentral/communication",
+      "test": "http://fldvt-apinet01.ad.nova.edu/appcentral/communication",
+      "stage": "https://api-stage.nova.edu/appcentral/communication",
+      "prod": "https://api.nova.edu/appcentral/communication"
+    },
+    "Bookings": {
+      "development": "http://fldvd-apinet01.ad.nova.edu/appcentral/booking",
+      "dev": "http://fldvd-apinet01.ad.nova.edu/appcentral/booking",
+      "test": "http://fldvt-apinet01.ad.nova.edu/appcentral/booking",
+      "stage": "https://api-stage.nova.edu/appcentral/booking",
+      "prod": "https://api.nova.edu/appcentral/booking"
+    },
+    "LoginApp1": {
+      "development": "http://localhost:8000/login",
+      "dev": "http://fldvd-webnet01.ad.nova.edu/appcentral/app/appcentral/login/",
+      "test": "http://fldvt-webnet01.ad.nova.edu/appcentral/app/appcentral/login/",
+      "stage": "https://appcentral-stage.nova.edu/app/appcentral/login/",
+      "prod": "https://appcentral.nova.edu/app/appcentral/login/"
+    },
+    "BaseUrl": {
+      "dev": "http://fldvd-webnet01.ad.nova.edu/appcentral/app/",
+      "test": "http://fldvt-webnet01.ad.nova.edu/appcentral/app/",
+      "stage": "https://appcentral-stage.nova.edu/app/",
+      "prod": "https://appcentral.nova.edu/app/"
+    }
+  }
+}

@@ -1,0 +1,41 @@
+﻿<div class="mail editor required" style="border-top: 0;">
+
+    <div style="font-size:12pt; font-weight:600; padding-bottom:15px;">{{vm.editorTitle}}</div>
+
+
+   <!--<wysiwyg textarea-id="question"
+             textarea-class="form-control"
+             textarea-height="250px"
+             textarea-name="body"
+             textarea-required
+             ng-maxlength="990"
+             ng-model="vm.message.body">
+
+   
+
+    </wysiwyg>-->
+
+
+
+    <!--<textarea style="height:250px;" class="form-control" name="body" ng-maxlength="1000" ng-model="vm.message.body" required></textarea>-->
+
+  
+    <!--<div ng-model="vm.message.body">
+        <summernote config="composeEditor.options" ng-maxlength="990"></summernote>
+    </div>-->
+
+    <div  >
+        <div ng-model="vm.message.body" summernote config="composeEditor.options" ng-maxlength="990" required></div>
+    </div>
+
+        <div class="form-group">           
+            <button class="btn btn-default" ng-click="composeEditor.cancel()"><!--<i class="fa fa-times"></i>--> Cancel</button>
+            <button class="btn btn-primary" ng-disabled="messageform.$invalid || isDisabled"  ng-click="vm.sendMessage(vm.message)" type="submit" style="background-color:#0287cc;"><!--<i class="fa fa-envelope"></i>--> Send</button>
+        </div>
+
+    </div>
+
+
+
+
+

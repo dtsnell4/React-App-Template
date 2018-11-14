@@ -1,0 +1,189 @@
+// Import vendor file
+@import "../twitter-boostrap/custom-forms";
+
+// Custom Overrides:
+.custom-checkbox .custom-control-label::before {
+    border-radius: .25rem;
+}
+.custom-checkbox .custom-control-input:checked ~ .custom-control-label::before {
+    background-color: $success;
+}
+
+.custom-control {
+	&.custom-radio, &.custom-checkbox {
+		margin-top: 0;
+		margin-bottom: .25rem;
+		.custom-control-label {
+			font-weight: normal;
+		}
+	}
+}
+
+
+// formColorPicker
+.color-picker{
+	.d-flex{
+		background-color: white;
+		padding: 10px 0px 0px 10px;
+		border: 1px solid rgb(204, 204, 204);
+		box-shadow: $pagination-focus-box-shadow;
+	}
+}
+
+// formSwitch in src/Inputs
+.onoffswitch {
+    position: relative;
+    width: 84px;
+    border: 1px solid #ccc;
+    height: 32px;
+    border-radius:4px;
+    overflow:hidden;
+    margin-left:0px;
+	.onoffswitch-checkbox {
+		display: none;
+	}
+
+	.onoffswitch-label {
+		display: block;
+		overflow: hidden;
+		cursor: pointer;
+		margin:0rem;
+	}
+
+	.onoffswitch-inner {
+		display: block;
+		width: 200%;
+		margin-left: -100%;
+		transition: 0.3s ease-in;
+	}
+
+	.onoffswitch-inner:before,
+	.onoffswitch-inner:after {
+		display: block;
+		float: left;
+		width: 50%;
+		height: 30px;
+		padding: 5px 0 0 0;
+		font-size: 14px;
+		font-family: Trebuchet, Arial, sans-serif;
+		font-weight: normal;
+	}
+
+	.onoffswitch-inner:before {
+		content: "ON";
+		padding-left: 10px;
+		background-color: #28a745;
+		color: #FFFFFF; 
+	}
+	.primary:before {
+		background-color: #428bca!important;
+	}
+
+	.onoffswitch-inner:after {
+		content: "OFF";
+		padding-right: 8px;
+		background-color: #eee;
+		color: #000;
+		text-align: right;
+	}
+
+	.onoffswitch-switch {
+		display: block;
+		width: 41px;
+		margin: 0;
+		padding:0px;
+		background: #FFFFFF;
+		position: absolute;
+		top: 0;
+		bottom: 0px;
+		right: 42px;
+		transition: all 0.3s ease-in 0s;
+	}
+
+	.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner {
+		margin-left: 0;
+	}
+	
+	.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
+		right: 0px;
+	}
+	&.yesnoswitch {
+		.onoffswitch-inner:before {
+			content: "YES";
+			position: relative;
+		    left: -3px;
+		}
+		.onoffswitch-inner:after {
+			content: "NO";
+		}
+	}
+	&.disabled {
+		opacity: 0.6;
+		.onoffswitch-label {
+			cursor: not-allowed;
+		}
+	}
+}
+
+.onoffswitch:focus {
+	outline: none;
+	box-shadow: $pagination-focus-box-shadow;
+	-moz-box-shadow: $pagination-focus-box-shadow;
+	-webkit-box-shadow: $pagination-focus-box-shadow;
+}
+
+// Syncfusion Radios and Checkboxes
+.e-checkbox-wrapper .e-frame, .e-css.e-checkbox-wrapper .e-frame {
+	background-color: $gray-300;
+    border-color: $gray-300;
+}
+.e-checkbox-wrapper .e-frame.e-check, .e-css.e-checkbox-wrapper .e-frame.e-check {
+    background-color: $primary;
+    border-color: $primary;
+    color: #fff;
+}
+.e-checkbox-wrapper .e-label, .e-css.e-checkbox-wrapper .e-label {
+	font-family: $font-family-sans-serif;
+}
+
+
+.e-radio + label::before, .e-radio:hover + label::before {
+    background-color: $gray-300;
+    border-color: $gray-300;
+    width: 1rem;
+    height: 1rem;
+    top: 0.15rem;
+}
+.e-radio:focus + label::before, .e-checkselect:focus + .e-frame {
+    box-shadow: 0 0 0 1px #f0f0f0, 0 0 0 0.2rem rgba(74, 163, 223, 0.25);
+}
+.e-radio:checked + label::before {
+    color: $white;
+    background-color: $primary;
+    border-color: $primary;
+    pointer-events: none;
+    content: "";
+    border-color: $primary;
+}
+.e-radio:checked + label:hover::before, .e-radio:focus:checked + label::before {
+    border-color: $primary;
+}
+.e-radio:checked + label::after, .e-radio:checked:hover + label::after, .e-radio:checked:focus + label::after {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3E%3Ccircle r='3' fill='%23fff'/%3E%3C/svg%3E");
+    background-color: initial;
+    color: $white;
+	position: absolute;
+    top: 0.15rem;
+    left: 0;
+    display: block;
+    width: 1rem;
+    height: 1rem;
+    content: "";
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 50% 50%;
+    transform: none;
+}
+.e-radio + label .e-label {
+    font-family: $font-family-sans-serif;
+}
