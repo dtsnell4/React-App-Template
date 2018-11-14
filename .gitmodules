@@ -1,4 +1,4 @@
-[submodule "web/react/app/AppcentralCore"]
-	path = web/react/app/AppcentralCore
+[submodule "app/AppcentralCore"]
+	path = app/AppcentralCore
 	url = https://vsts-nova-edu.visualstudio.com/NSU/_git/SD_AppCentral_Core
 	branch = Develop
